@@ -1,0 +1,123 @@
+# Requirements: AI Job Death Clock
+
+**Defined:** 2026-03-17
+**Core Value:** The results page must be visually dramatic and genuinely funny — if people don't screenshot and share it, nothing else matters.
+
+## v1 Requirements
+
+### Input
+
+- [ ] **INP-01**: User can select profession from dropdown of 20 occupations + "Other (Low Risk)"
+- [ ] **INP-02**: User can enter years of experience (numeric input)
+- [ ] **INP-03**: Input form and experience input are on the same screen
+- [ ] **INP-04**: Profession list shows all occupations from Karpathy's AI exposure data
+
+### Calculation
+
+- [ ] **CALC-01**: System maps years of experience to seniority level (0-2=Junior, 3-5=Mid, 6-9=Senior, 10+=Architect)
+- [ ] **CALC-02**: System calculates adjusted exposure score: BaseScore - (Slevel x 1.5)
+- [ ] **CALC-03**: System converts adjusted score to "shelf life" (estimated years until replacement)
+- [ ] **CALC-04**: Adjusted score is clamped to 0-10 range (no negative values)
+
+### Results Display
+
+- [ ] **RES-01**: User sees countdown timer showing years, months, and days until AI replacement
+- [ ] **RES-02**: User sees animated risk gauge meter (safe to doomed scale)
+- [ ] **RES-03**: User sees playful-cruel roast message specific to their profession and seniority level
+- [ ] **RES-04**: Results appear with dramatic glitch/CRT reveal animation
+- [ ] **RES-05**: User can click "Try Again" to reset and try another profession
+
+### Visual Design
+
+- [ ] **VIS-01**: Page has cyberpunk terminal aesthetic (dark bg, neon glows, monospace font)
+- [ ] **VIS-02**: Text has neon glow effects using multi-layer text-shadow
+- [ ] **VIS-03**: Page has scanline overlay for CRT monitor effect
+- [ ] **VIS-04**: Glitch text animation on key headings
+- [ ] **VIS-05**: Page is fully responsive on mobile devices (375px+)
+
+### Bilingual
+
+- [ ] **I18N-01**: User can toggle between English and Portuguese (PT-BR)
+- [ ] **I18N-02**: All UI text exists in both languages
+- [ ] **I18N-03**: All roast messages exist in both languages
+- [ ] **I18N-04**: Language preference persists across page reload (localStorage)
+
+### Sharing
+
+- [ ] **SHR-01**: User can share result on Twitter/X with pre-filled text
+- [ ] **SHR-02**: User can share result on WhatsApp with pre-filled text
+- [ ] **SHR-03**: User can share result on LinkedIn
+- [ ] **SHR-04**: Shared URL contains result state in hash (opens results, not empty form)
+- [ ] **SHR-05**: Page has Open Graph meta tags for rich link previews
+
+### Deployment
+
+- [ ] **DEP-01**: Site is a single self-contained HTML file (inline CSS/JS)
+- [ ] **DEP-02**: Site is hosted on GitHub Pages
+- [ ] **DEP-03**: Site works without any server-side code or API calls
+
+## v2 Requirements
+
+### Additional Content
+
+- **V2-01**: Salary/replacement cost data per occupation ("AI replacing you costs $X/month")
+- **V2-02**: Additional languages (ES, FR)
+- **V2-03**: Additional occupations beyond Karpathy's list
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| User accounts / profiles | Kills frictionless experience; GDPR/LGPD overhead |
+| AI-generated roast messages | API dependency breaks offline use; latency kills instant reveal; costs scale with virality |
+| Free-text job input | Requires NLP/fuzzy matching; undermines formula; curated list + "Other" is sufficient |
+| Multi-step quiz (5+ questions) | Completion rate drops ~15% per step; destroys instant gratification |
+| Leaderboard / ranking | Requires persistence layer; stale data |
+| Email capture / newsletter | Friction at share moment; LGPD compliance |
+| Comments section | Moderation burden; Twitter/X is the comments section |
+| Exact replacement date | False precision destroys credibility; legal/reputational risk |
+| PWA / offline mode | Conflicts with single-file constraint; not a real use case |
+
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| INP-01 | TBD | Pending |
+| INP-02 | TBD | Pending |
+| INP-03 | TBD | Pending |
+| INP-04 | TBD | Pending |
+| CALC-01 | TBD | Pending |
+| CALC-02 | TBD | Pending |
+| CALC-03 | TBD | Pending |
+| CALC-04 | TBD | Pending |
+| RES-01 | TBD | Pending |
+| RES-02 | TBD | Pending |
+| RES-03 | TBD | Pending |
+| RES-04 | TBD | Pending |
+| RES-05 | TBD | Pending |
+| VIS-01 | TBD | Pending |
+| VIS-02 | TBD | Pending |
+| VIS-03 | TBD | Pending |
+| VIS-04 | TBD | Pending |
+| VIS-05 | TBD | Pending |
+| I18N-01 | TBD | Pending |
+| I18N-02 | TBD | Pending |
+| I18N-03 | TBD | Pending |
+| I18N-04 | TBD | Pending |
+| SHR-01 | TBD | Pending |
+| SHR-02 | TBD | Pending |
+| SHR-03 | TBD | Pending |
+| SHR-04 | TBD | Pending |
+| SHR-05 | TBD | Pending |
+| DEP-01 | TBD | Pending |
+| DEP-02 | TBD | Pending |
+| DEP-03 | TBD | Pending |
+
+**Coverage:**
+- v1 requirements: 30 total
+- Mapped to phases: 0
+- Unmapped: 30
+
+---
+*Requirements defined: 2026-03-17*
+*Last updated: 2026-03-17 after initial definition*
