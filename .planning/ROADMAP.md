@@ -29,7 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Clicking a Calculate button transitions the view from input to results (and Try Again returns to input)
   4. HTML file is self-contained with no external JS dependencies; page works if Google Fonts CDN fails (monospace fallback)
   5. Internal file section comments (DATA, ENGINE, I18N, UI, SHARE, BOOT) are in place and the ENGINE section contains zero DOM access
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Create index.html scaffold with CSS variables, occupation data, card grid UI, and view toggling
+- [ ] 01-02-PLAN.md — Deploy to GitHub Pages and verify live site
 
 ### Phase 2: Engine and Results
 **Goal**: Entering any profession and years of experience produces a correct, formula-driven countdown, gauge position, and roast message — all verified against the full 21x4 output matrix before any copy is finalized
@@ -74,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 0/TBD | Not started | - |
+| 1. Scaffold | 0/2 | Planning complete | - |
 | 2. Engine and Results | 0/TBD | Not started | - |
 | 3. Visual Polish | 0/TBD | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |
