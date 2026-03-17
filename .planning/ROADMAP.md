@@ -12,7 +12,7 @@ A single HTML file progresses through four build layers: scaffold and deployable
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Scaffold** - Deployed skeleton on GitHub Pages with input form, CSS variables, and file section structure established
+- [~] **Phase 1: Scaffold** - Deployed skeleton on GitHub Pages with input form, CSS variables, and file section structure established
 - [ ] **Phase 2: Engine and Results** - Calculation engine produces correct outputs; results page shows countdown, gauge, and roast
 - [ ] **Phase 3: Visual Polish** - Cyberpunk aesthetics fully realized: neon glow, scanlines, glitch animation, responsive layout
 - [ ] **Phase 4: Content, i18n, and Sharing** - Bilingual roasts and UI strings, language toggle, URL hash state, social share buttons live
@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Internal file section comments (DATA, ENGINE, I18N, UI, SHARE, BOOT) are in place and the ENGINE section contains zero DOM access
 **Plans**: 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Create index.html scaffold with CSS variables, occupation data, card grid UI, and view toggling
+- [x] 01-01-PLAN.md — Create index.html scaffold with CSS variables, occupation data, card grid UI, and view toggling
 - [ ] 01-02-PLAN.md — Deploy to GitHub Pages and verify live site
 
 ### Phase 2: Engine and Results
@@ -77,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 0/2 | Planning complete | - |
+| 1. Scaffold | 1/2 | In Progress|  |
 | 2. Engine and Results | 0/TBD | Not started | - |
 | 3. Visual Polish | 0/TBD | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |

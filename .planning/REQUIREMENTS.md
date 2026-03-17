@@ -7,10 +7,10 @@
 
 ### Input
 
-- [ ] **INP-01**: User can select profession from dropdown of 20 occupations + "Other (Low Risk)"
-- [ ] **INP-02**: User can enter years of experience (numeric input)
-- [ ] **INP-03**: Input form and experience input are on the same screen
-- [ ] **INP-04**: Profession list shows all occupations from Karpathy's AI exposure data
+- [x] **INP-01**: User can select profession from dropdown of 20 occupations + "Other (Low Risk)"
+- [x] **INP-02**: User can enter years of experience (numeric input)
+- [x] **INP-03**: Input form and experience input are on the same screen
+- [x] **INP-04**: Profession list shows all occupations from Karpathy's AI exposure data
 
 ### Calculation
 
@@ -29,7 +29,7 @@
 
 ### Visual Design
 
-- [ ] **VIS-01**: Page has cyberpunk terminal aesthetic (dark bg, neon glows, monospace font)
+- [x] **VIS-01**: Page has cyberpunk terminal aesthetic (dark bg, neon glows, monospace font)
 - [ ] **VIS-02**: Text has neon glow effects using multi-layer text-shadow
 - [ ] **VIS-03**: Page has scanline overlay for CRT monitor effect
 - [ ] **VIS-04**: Glitch text animation on key headings
@@ -52,9 +52,9 @@
 
 ### Deployment
 
-- [ ] **DEP-01**: Site is a single self-contained HTML file (inline CSS/JS)
+- [x] **DEP-01**: Site is a single self-contained HTML file (inline CSS/JS)
 - [ ] **DEP-02**: Site is hosted on GitHub Pages
-- [ ] **DEP-03**: Site works without any server-side code or API calls
+- [x] **DEP-03**: Site works without any server-side code or API calls
 
 ## v2 Requirements
 
@@ -82,14 +82,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INP-01 | Phase 1 | Pending |
-| INP-02 | Phase 1 | Pending |
-| INP-03 | Phase 1 | Pending |
-| INP-04 | Phase 1 | Pending |
-| DEP-01 | Phase 1 | Pending |
-| DEP-02 | Phase 1 | Pending |
-| DEP-03 | Phase 1 | Pending |
-| VIS-01 | Phase 1 | Pending |
+| INP-01 | Phase 1 | Complete (01-01) |
+| INP-02 | Phase 1 | Complete (01-01) |
+| INP-03 | Phase 1 | Complete (01-01) |
+| INP-04 | Phase 1 | Complete (01-01) |
+| DEP-01 | Phase 1 | Complete (01-01) |
+| DEP-02 | Phase 1 | Pending (01-02) |
+| DEP-03 | Phase 1 | Complete (01-01) |
+| VIS-01 | Phase 1 | Complete (01-01) |
 | CALC-01 | Phase 2 | Pending |
 | CALC-02 | Phase 2 | Pending |
 | CALC-03 | Phase 2 | Pending |
