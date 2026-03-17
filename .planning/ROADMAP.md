@@ -77,7 +77,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 1/2 | In Progress|  |
+| 1. Scaffold | 2/2 | Complete   | 2026-03-17 |
 | 2. Engine and Results | 0/TBD | Not started | - |
 | 3. Visual Polish | 0/TBD | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |

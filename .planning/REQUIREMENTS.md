@@ -53,7 +53,7 @@
 ### Deployment
 
 - [x] **DEP-01**: Site is a single self-contained HTML file (inline CSS/JS)
-- [ ] **DEP-02**: Site is hosted on GitHub Pages
+- [x] **DEP-02**: Site is hosted on GitHub Pages
 - [x] **DEP-03**: Site works without any server-side code or API calls
 
 ## v2 Requirements
