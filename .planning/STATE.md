@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-01-PLAN.md
-last_updated: "2026-03-18T13:32:22.044Z"
+stopped_at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-02-PLAN.md
+last_updated: "2026-03-18T13:37:03.511Z"
 last_activity: 2026-03-18 — Completed plan 04-03 (hash-linked result hydration, share actions, and verifier coverage)
 progress:
   total_phases: 5
   completed_phases: 4
   total_plans: 13
-  completed_plans: 11
+  completed_plans: 12
   percent: 100
 ---
 
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 
 ## Current Position
 
-Phase: 4 of 4 (Content, i18n, and Sharing) — COMPLETE
-Plan: 3 of 3 in current phase — COMPLETE
-Status: Milestone complete — bilingual content, persisted language switching, share-state URLs, and social share actions shipped
-Last activity: 2026-03-18 — Completed plan 04-03 (hash-linked result hydration, share actions, and verifier coverage)
+Phase: 5 of 5 (UX Polish, Missing Professions, Modal, Article Link) — COMPLETE
+Plan: 2 of 2 in current phase — COMPLETE
+Status: All phases complete — card suspense, explainer modal, article link, FB/IG share buttons shipped
+Last activity: 2026-03-18 — Completed plan 05-02 (modal, article link, FB/IG share buttons)
 
-Progress: [██████████] 100% (10 of 10 plans complete; milestone complete)
+Progress: [█████████░] 92% (12 of 13 plans complete)
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Progress: [██████████] 100% (10 of 10 plans complete; milest
 | Phase 04-content-i18n-and-sharing P02 | 4 | 2 tasks | 2 files |
 | Phase 04-content-i18n-and-sharing P03 | 7 | 2 tasks | 2 files |
 | Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link P01 | 4 | 2 tasks | 4 files |
+| Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link P02 | 10 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -105,6 +106,9 @@ Recent decisions affecting current work:
 - [Phase 04-content-i18n-and-sharing]: LinkedIn sharing remains URL-only with no text= parameter; result-specific copy stays in localized builders for X and WhatsApp.
 - [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Verifier written first with target count 31 to drive implementation (Wave 0 TDD pattern)
 - [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Phase 2 and Phase 4 verifier hardcoded counts updated to 31 occupations and 124 matrix rows after data expansion
+- [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Instagram share copies text to clipboard via navigator.clipboard API with graceful fallback to opening instagram.com
+- [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: renderModalContent() called inside renderStaticLabels() so language switching automatically rerenders modal title and body
+- [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Native HTML dialog element used with showModal() — no z-index conflicts with body::after scanline overlay (top layer rendering)
 
 ### Pending Todos
 
@@ -121,6 +125,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T13:32:22.042Z
-Stopped at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-01-PLAN.md
+Last session: 2026-03-18T13:37:03.509Z
+Stopped at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-02-PLAN.md
 Resume file: None
