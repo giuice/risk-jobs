@@ -114,13 +114,6 @@
       line-height: 1.3;
     }
 
-    .card .card-risk {
-      font-size: 0.7rem;
-      color: var(--neon-pink);
-      margin-top: 8px;
-      opacity: 0.7;
-    }
-
     /* ---- Experience Selector ---- */
     .experience-selector {
       display: flex;
@@ -948,7 +941,13 @@
         shareLinkedInLabel: 'Share on LinkedIn',
         languageLabel: 'Language',
         languageEnglish: 'English',
-        languagePortuguese: 'Portuguese (BR)'
+        languagePortuguese: 'Portuguese (BR)',
+        explainerTriggerLabel: 'HOW IS THIS CALCULATED?',
+        explainerModalTitle: 'How This Calculation Works',
+        explainerModalBodyHtml: '<div class="modal-section"><h3>For Everyone</h3><p>We use data from AI researcher Andrej Karpathy\'s analysis of hundreds of US occupations to give each job a "Base AI Exposure Score" from 0 to 10. Jobs done entirely on a computer score high. Jobs requiring physical presence score low.</p></div><div class="modal-section"><h3>The Formula</h3><ol><li><strong>Base Score (0\u201310):</strong> How exposed is your job type to AI automation?</li><li><strong>Seniority Adjustment:</strong> \u22121.5 points per seniority level (Junior=0, Mid=\u22121.5, Senior=\u22123, Architect=\u22124.5). Adjusted Score = Base \u2212 (Level \u00d7 1.5), clamped to 0\u201310.</li><li><strong>Shelf Life:</strong> (10 \u2212 Adjusted Score) \u00d7 1.2, max 12 years. Score 10 = 0 years. Score 0 = 12 years.</li></ol></div><div class="modal-section"><h3>Risk Bands</h3><ul><li><strong>LOW RISK (0\u20132.5):</strong> Machines only have you bookmarked.</li><li><strong>WATCHLIST (2.5\u20134.5):</strong> Replacement memo drafted, awaiting budget.</li><li><strong>EXPOSED (4.5\u20136.5):</strong> No longer future-proof.</li><li><strong>CRITICAL (6.5\u20138.5):</strong> Automation pilot has your chair in its rollout plan.</li><li><strong>DOOMED (8.5\u201310):</strong> AI is just asking where you keep the passwords.</li></ul></div><div class="modal-section modal-section--science"><h3>For Scientists</h3><p>This is a heuristic model, not a rigorous economic forecast. Scores are LLM-estimated against BLS Occupational Outlook data. The seniority modifier is a linear penalty reflecting human capital as a partial moat. No model predicts the future \u2014 this is a thinking tool, not a prophecy.</p></div>',
+        articleLinkLabel: 'Read: The 7 Frameworks for Understanding the Post-Labor Economy (PT-BR)',
+        shareFacebookLabel: 'Share on Facebook',
+        shareInstagramLabel: 'Copy for Instagram'
       },
       ptbr: {
         documentTitle: 'Relogio da Morte Profissional por IA',
@@ -974,7 +973,13 @@
         shareLinkedInLabel: 'Compartilhar no LinkedIn',
         languageLabel: 'Idioma',
         languageEnglish: 'Ingles',
-        languagePortuguese: 'Portugues (BR)'
+        languagePortuguese: 'Portugues (BR)',
+        explainerTriggerLabel: 'COMO ISSO E CALCULADO?',
+        explainerModalTitle: 'Como Este Calculo Funciona',
+        explainerModalBodyHtml: '<div class="modal-section"><h3>Para Todo Mundo</h3><p>Usamos dados da analise do pesquisador de IA Andrej Karpathy sobre centenas de ocupacoes para dar a cada profissao uma "Pontuacao Base de Exposicao a IA" de 0 a 10. Trabalhos feitos inteiramente no computador pontuam alto. Trabalhos que exigem presenca fisica pontuam baixo.</p></div><div class="modal-section"><h3>A Formula</h3><ol><li><strong>Pontuacao Base (0\u201310):</strong> Qual a exposicao da sua profissao a automacao por IA?</li><li><strong>Ajuste de Senioridade:</strong> \u22121,5 pontos por nivel (Junior=0, Mid=\u22121,5, Senior=\u22123, Arquiteto=\u22124,5). Pontuacao Ajustada = Base \u2212 (Nivel \u00d7 1,5), limitado entre 0\u201310.</li><li><strong>Prazo de Validade:</strong> (10 \u2212 Pontuacao Ajustada) \u00d7 1,2, maximo 12 anos. Pontuacao 10 = 0 anos. Pontuacao 0 = 12 anos.</li></ol></div><div class="modal-section"><h3>Faixas de Risco</h3><ul><li><strong>BAIXO RISCO (0\u20132,5):</strong> As maquinas so deixaram voce nos favoritos.</li><li><strong>VIGIADO (2,5\u20134,5):</strong> Memorando de substituicao rascunhado, aguardando budget.</li><li><strong>EXPOSTO (4,5\u20136,5):</strong> Voce ja nao esta protegido para o futuro.</li><li><strong>CRITICO (6,5\u20138,5):</strong> O piloto de automacao reservou sua cadeira no cronograma.</li><li><strong>CONDENADO (8,5\u201310):</strong> A IA so quer saber onde ficam as senhas.</li></ul></div><div class="modal-section modal-section--science"><h3>Para Cientistas</h3><p>Este e um modelo heuristico, nao uma previsao economica rigorosa. As pontuacoes foram estimadas por LLM contra dados do BLS Occupational Outlook. O modificador de senioridade e uma penalidade linear que reflete capital humano como barreira parcial. Nenhum modelo preve o futuro \u2014 esta e uma ferramenta de reflexao, nao uma profecia.</p></div>',
+        articleLinkLabel: 'Leia: Os 7 Frameworks para Entender a Economia Pos-Trabalho',
+        shareFacebookLabel: 'Compartilhar no Facebook',
+        shareInstagramLabel: 'Copiar para Instagram'
       }
     };
 
@@ -1272,6 +1277,18 @@
       document.getElementById('language-toggle-label').textContent = t('languageLabel', currentLanguage);
       document.querySelector('.lang-btn[data-lang="en"]').setAttribute('aria-label', t('languageEnglish', currentLanguage));
       document.querySelector('.lang-btn[data-lang="ptbr"]').setAttribute('aria-label', t('languagePortuguese', currentLanguage));
+      document.getElementById('explainer-trigger-btn').textContent = t('explainerTriggerLabel', currentLanguage);
+      document.getElementById('article-link').textContent = t('articleLinkLabel', currentLanguage);
+      document.getElementById('share-facebook-btn').textContent = t('shareFacebookLabel', currentLanguage);
+      document.getElementById('share-instagram-btn').textContent = t('shareInstagramLabel', currentLanguage);
+      renderModalContent(currentLanguage);
+    }
+
+    function renderModalContent(language) {
+      var titleEl = document.getElementById('modal-title-heading');
+      var bodyEl = document.getElementById('modal-body');
+      if (titleEl) titleEl.textContent = t('explainerModalTitle', language);
+      if (bodyEl) bodyEl.innerHTML = t('explainerModalBodyHtml', language);
     }
 
     function renderResultContent(result) {
@@ -1338,12 +1355,7 @@
         cardName.className = 'card-name';
         cardName.textContent = getOccupationLabel(occ.id, currentLanguage);
 
-        const cardRisk = document.createElement('div');
-        cardRisk.className = 'card-risk';
-        cardRisk.textContent = t('riskPrefix', currentLanguage) + ': ' + occ.baseScore + '/10';
-
         card.appendChild(cardName);
-        card.appendChild(cardRisk);
         card.addEventListener('click', function() {
           selectCard(occ.id);
         });
@@ -1552,6 +1564,15 @@
     function buildLinkedInShareUrl(result) {
       return 'https://www.linkedin.com/sharing/share-offsite/?url=' +
         encodeURIComponent(buildStateUrl(buildShareState(result)));
+    }
+
+    function buildFacebookShareUrl(result) {
+      return 'https://www.facebook.com/sharer/sharer.php?u=' +
+        encodeURIComponent(buildStateUrl(buildShareState(result)));
+    }
+
+    function buildInstagramCopyText(result, language) {
+      return buildShareMessage(result, language);
     }
 
     function openShareWindow(url) {
