@@ -1,0 +1,1856 @@
+{
+  "occupationCount": 21,
+  "seniorityCount": 4,
+  "matrixSize": 84,
+  "numericCollisionCount": 67,
+  "rows": [
+    {
+      "occupationId": "medical-transcriptionists",
+      "occupationName": "Medical Transcriptionists",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 10,
+      "shelfLifeYears": 0,
+      "countdown": {
+        "years": 0,
+        "months": 0,
+        "days": 0,
+        "totalDays": 0
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your headset already sounds like a museum exhibit. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "occupationName": "Medical Transcriptionists",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 8.5,
+      "shelfLifeYears": 1.7999999999999998,
+      "countdown": {
+        "years": 1,
+        "months": 9,
+        "days": 22,
+        "totalDays": 657
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your headset already sounds like a museum exhibit. At this point the AI is basically asking where you keep the passwords. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "occupationName": "Medical Transcriptionists",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 7,
+      "shelfLifeYears": 3.5999999999999996,
+      "countdown": {
+        "years": 3,
+        "months": 7,
+        "days": 9,
+        "totalDays": 1314
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your headset already sounds like a museum exhibit. The automation pilot already has your chair in its rollout plan. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "occupationName": "Medical Transcriptionists",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 5.5,
+      "shelfLifeYears": 5.3999999999999995,
+      "countdown": {
+        "years": 5,
+        "months": 4,
+        "days": 26,
+        "totalDays": 1971
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your headset already sounds like a museum exhibit. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "software-developers",
+      "occupationName": "Software Developers / Engineers",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your backlog now has a silicon staff engineer with no sleep cycle. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "software-developers",
+      "occupationName": "Software Developers / Engineers",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your backlog now has a silicon staff engineer with no sleep cycle. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "software-developers",
+      "occupationName": "Software Developers / Engineers",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your backlog now has a silicon staff engineer with no sleep cycle. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "software-developers",
+      "occupationName": "Software Developers / Engineers",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your backlog now has a silicon staff engineer with no sleep cycle. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "data-scientists",
+      "occupationName": "Data Scientists / Analysts",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your dashboards just discovered they can explain themselves. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "data-scientists",
+      "occupationName": "Data Scientists / Analysts",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your dashboards just discovered they can explain themselves. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "data-scientists",
+      "occupationName": "Data Scientists / Analysts",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your dashboards just discovered they can explain themselves. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "data-scientists",
+      "occupationName": "Data Scientists / Analysts",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your dashboards just discovered they can explain themselves. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "occupationName": "Financial Analysts",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your spreadsheet model now pitches itself to the board. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "occupationName": "Financial Analysts",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your spreadsheet model now pitches itself to the board. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "occupationName": "Financial Analysts",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your spreadsheet model now pitches itself to the board. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "occupationName": "Financial Analysts",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your spreadsheet model now pitches itself to the board. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "occupationName": "Graphic Designers",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your moodboard just unionized under a prompt box. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "occupationName": "Graphic Designers",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your moodboard just unionized under a prompt box. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "occupationName": "Graphic Designers",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your moodboard just unionized under a prompt box. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "occupationName": "Graphic Designers",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your moodboard just unionized under a prompt box. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "occupationName": "Financial Clerks",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your reconciliation ritual has been converted into autocomplete. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "occupationName": "Financial Clerks",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your reconciliation ritual has been converted into autocomplete. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "occupationName": "Financial Clerks",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your reconciliation ritual has been converted into autocomplete. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "occupationName": "Financial Clerks",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your reconciliation ritual has been converted into autocomplete. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "occupationName": "General Office Clerks",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 9,
+      "shelfLifeYears": 1.2,
+      "countdown": {
+        "years": 1,
+        "months": 2,
+        "days": 13,
+        "totalDays": 438
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your inbox chores are getting packaged as a platform feature. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "occupationName": "General Office Clerks",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your inbox chores are getting packaged as a platform feature. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "occupationName": "General Office Clerks",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your inbox chores are getting packaged as a platform feature. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "occupationName": "General Office Clerks",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your inbox chores are getting packaged as a platform feature. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "occupationName": "Accountants and Auditors",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 8.5,
+      "shelfLifeYears": 1.7999999999999998,
+      "countdown": {
+        "years": 1,
+        "months": 9,
+        "days": 22,
+        "totalDays": 657
+      },
+      "risk": {
+        "key": "doomed",
+        "label": "DOOMED",
+        "needlePercent": 92,
+        "needleAngle": 75.6,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your variance check is being rebranded as instant compliance. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "occupationName": "Accountants and Auditors",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 7,
+      "shelfLifeYears": 3.5999999999999996,
+      "countdown": {
+        "years": 3,
+        "months": 7,
+        "days": 9,
+        "totalDays": 1314
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your variance check is being rebranded as instant compliance. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "occupationName": "Accountants and Auditors",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 5.5,
+      "shelfLifeYears": 5.3999999999999995,
+      "countdown": {
+        "years": 5,
+        "months": 4,
+        "days": 26,
+        "totalDays": 1971
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your variance check is being rebranded as instant compliance. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "occupationName": "Accountants and Auditors",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 4,
+      "shelfLifeYears": 7.199999999999999,
+      "countdown": {
+        "years": 7,
+        "months": 2,
+        "days": 13,
+        "totalDays": 2628
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your variance check is being rebranded as instant compliance. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "lawyers",
+      "occupationName": "Lawyers",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 8,
+      "shelfLifeYears": 2.4,
+      "countdown": {
+        "years": 2,
+        "months": 4,
+        "days": 26,
+        "totalDays": 876
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your billable hours just met a parser with no conscience. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "lawyers",
+      "occupationName": "Lawyers",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6.5,
+      "shelfLifeYears": 4.2,
+      "countdown": {
+        "years": 4,
+        "months": 2,
+        "days": 13,
+        "totalDays": 1533
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your billable hours just met a parser with no conscience. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "lawyers",
+      "occupationName": "Lawyers",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 5,
+      "shelfLifeYears": 6,
+      "countdown": {
+        "years": 6,
+        "months": 0,
+        "days": 0,
+        "totalDays": 2190
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your billable hours just met a parser with no conscience. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "lawyers",
+      "occupationName": "Lawyers",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3.5,
+      "shelfLifeYears": 7.8,
+      "countdown": {
+        "years": 7,
+        "months": 9,
+        "days": 22,
+        "totalDays": 2847
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your billable hours just met a parser with no conscience. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "paralegals",
+      "occupationName": "Paralegals & Legal Assistants",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 8,
+      "shelfLifeYears": 2.4,
+      "countdown": {
+        "years": 2,
+        "months": 4,
+        "days": 26,
+        "totalDays": 876
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your document prep is being eaten one precedent at a time. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "paralegals",
+      "occupationName": "Paralegals & Legal Assistants",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6.5,
+      "shelfLifeYears": 4.2,
+      "countdown": {
+        "years": 4,
+        "months": 2,
+        "days": 13,
+        "totalDays": 1533
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your document prep is being eaten one precedent at a time. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "paralegals",
+      "occupationName": "Paralegals & Legal Assistants",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 5,
+      "shelfLifeYears": 6,
+      "countdown": {
+        "years": 6,
+        "months": 0,
+        "days": 0,
+        "totalDays": 2190
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your document prep is being eaten one precedent at a time. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "paralegals",
+      "occupationName": "Paralegals & Legal Assistants",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3.5,
+      "shelfLifeYears": 7.8,
+      "countdown": {
+        "years": 7,
+        "months": 9,
+        "days": 22,
+        "totalDays": 2847
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your document prep is being eaten one precedent at a time. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "occupationName": "Computer Systems Analysts",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 8,
+      "shelfLifeYears": 2.4,
+      "countdown": {
+        "years": 2,
+        "months": 4,
+        "days": 26,
+        "totalDays": 876
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your requirements workshop now speaks fluent machine certainty. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "occupationName": "Computer Systems Analysts",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6.5,
+      "shelfLifeYears": 4.2,
+      "countdown": {
+        "years": 4,
+        "months": 2,
+        "days": 13,
+        "totalDays": 1533
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your requirements workshop now speaks fluent machine certainty. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "occupationName": "Computer Systems Analysts",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 5,
+      "shelfLifeYears": 6,
+      "countdown": {
+        "years": 6,
+        "months": 0,
+        "days": 0,
+        "totalDays": 2190
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your requirements workshop now speaks fluent machine certainty. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "occupationName": "Computer Systems Analysts",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3.5,
+      "shelfLifeYears": 7.8,
+      "countdown": {
+        "years": 7,
+        "months": 9,
+        "days": 22,
+        "totalDays": 2847
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your requirements workshop now speaks fluent machine certainty. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "support-specialists",
+      "occupationName": "Computer Support Specialists",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 8,
+      "shelfLifeYears": 2.4,
+      "countdown": {
+        "years": 2,
+        "months": 4,
+        "days": 26,
+        "totalDays": 876
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your ticket queue just learned to close itself politely. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "support-specialists",
+      "occupationName": "Computer Support Specialists",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6.5,
+      "shelfLifeYears": 4.2,
+      "countdown": {
+        "years": 4,
+        "months": 2,
+        "days": 13,
+        "totalDays": 1533
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your ticket queue just learned to close itself politely. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "support-specialists",
+      "occupationName": "Computer Support Specialists",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 5,
+      "shelfLifeYears": 6,
+      "countdown": {
+        "years": 6,
+        "months": 0,
+        "days": 0,
+        "totalDays": 2190
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your ticket queue just learned to close itself politely. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "support-specialists",
+      "occupationName": "Computer Support Specialists",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3.5,
+      "shelfLifeYears": 7.8,
+      "countdown": {
+        "years": 7,
+        "months": 9,
+        "days": 22,
+        "totalDays": 2847
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your ticket queue just learned to close itself politely. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "financial-managers",
+      "occupationName": "Financial Managers",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your forecasting deck has started cutting you out of the meeting. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "financial-managers",
+      "occupationName": "Financial Managers",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your forecasting deck has started cutting you out of the meeting. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "financial-managers",
+      "occupationName": "Financial Managers",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your forecasting deck has started cutting you out of the meeting. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "financial-managers",
+      "occupationName": "Financial Managers",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your forecasting deck has started cutting you out of the meeting. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "occupationName": "HR Specialists",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your interview rubric now arrives with its own synthetic recruiter. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "occupationName": "HR Specialists",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your interview rubric now arrives with its own synthetic recruiter. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "occupationName": "HR Specialists",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your interview rubric now arrives with its own synthetic recruiter. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "occupationName": "HR Specialists",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your interview rubric now arrives with its own synthetic recruiter. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "medical-records",
+      "occupationName": "Medical Records Specialists",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your coding workflow is halfway to being a background daemon. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "medical-records",
+      "occupationName": "Medical Records Specialists",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your coding workflow is halfway to being a background daemon. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "medical-records",
+      "occupationName": "Medical Records Specialists",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your coding workflow is halfway to being a background daemon. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "medical-records",
+      "occupationName": "Medical Records Specialists",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your coding workflow is halfway to being a background daemon. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "customer-service",
+      "occupationName": "Customer Service Representatives",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your empathy script just got productized by the minute. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "customer-service",
+      "occupationName": "Customer Service Representatives",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your empathy script just got productized by the minute. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "customer-service",
+      "occupationName": "Customer Service Representatives",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your empathy script just got productized by the minute. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "customer-service",
+      "occupationName": "Customer Service Representatives",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your empathy script just got productized by the minute. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "secretaries",
+      "occupationName": "Secretaries & Admin Assistants",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "secretaries",
+      "occupationName": "Secretaries & Admin Assistants",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "secretaries",
+      "occupationName": "Secretaries & Admin Assistants",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "secretaries",
+      "occupationName": "Secretaries & Admin Assistants",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "travel-agents",
+      "occupationName": "Travel Agents",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your itinerary magic is being flattened into one confident chatbot. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "travel-agents",
+      "occupationName": "Travel Agents",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your itinerary magic is being flattened into one confident chatbot. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "travel-agents",
+      "occupationName": "Travel Agents",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your itinerary magic is being flattened into one confident chatbot. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "travel-agents",
+      "occupationName": "Travel Agents",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your itinerary magic is being flattened into one confident chatbot. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "occupationName": "Bookkeeping / Payroll Clerks",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7.5,
+      "shelfLifeYears": 3,
+      "countdown": {
+        "years": 3,
+        "months": 0,
+        "days": 0,
+        "totalDays": 1095
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your payroll ritual is turning into an overnight cron job. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "occupationName": "Bookkeeping / Payroll Clerks",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 6,
+      "shelfLifeYears": 4.8,
+      "countdown": {
+        "years": 4,
+        "months": 9,
+        "days": 22,
+        "totalDays": 1752
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your payroll ritual is turning into an overnight cron job. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "occupationName": "Bookkeeping / Payroll Clerks",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4.5,
+      "shelfLifeYears": 6.6,
+      "countdown": {
+        "years": 6,
+        "months": 7,
+        "days": 9,
+        "totalDays": 2409
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your payroll ritual is turning into an overnight cron job. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "occupationName": "Bookkeeping / Payroll Clerks",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 3,
+      "shelfLifeYears": 8.4,
+      "countdown": {
+        "years": 8,
+        "months": 4,
+        "days": 26,
+        "totalDays": 3066
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your payroll ritual is turning into an overnight cron job. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "cashiers",
+      "occupationName": "Cashiers",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 7,
+      "shelfLifeYears": 3.5999999999999996,
+      "countdown": {
+        "years": 3,
+        "months": 7,
+        "days": 9,
+        "totalDays": 1314
+      },
+      "risk": {
+        "key": "critical",
+        "label": "CRITICAL",
+        "needlePercent": 72,
+        "needleAngle": 39.599999999999994,
+        "colorVar": "--neon-pink"
+      },
+      "roast": "Your lane just got challenged by a camera and a sensor grid. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "cashiers",
+      "occupationName": "Cashiers",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 5.5,
+      "shelfLifeYears": 5.3999999999999995,
+      "countdown": {
+        "years": 5,
+        "months": 4,
+        "days": 26,
+        "totalDays": 1971
+      },
+      "risk": {
+        "key": "exposed",
+        "label": "EXPOSED",
+        "needlePercent": 50,
+        "needleAngle": 0,
+        "colorVar": "--neon-yellow"
+      },
+      "roast": "Your lane just got challenged by a camera and a sensor grid. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "cashiers",
+      "occupationName": "Cashiers",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 4,
+      "shelfLifeYears": 7.199999999999999,
+      "countdown": {
+        "years": 7,
+        "months": 2,
+        "days": 13,
+        "totalDays": 2628
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your lane just got challenged by a camera and a sensor grid. The replacement memo is drafted, it is just waiting for budget approval. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "cashiers",
+      "occupationName": "Cashiers",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 2.5,
+      "shelfLifeYears": 9,
+      "countdown": {
+        "years": 9,
+        "months": 0,
+        "days": 0,
+        "totalDays": 3285
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Your lane just got challenged by a camera and a sensor grid. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption."
+    },
+    {
+      "occupationId": "other",
+      "occupationName": "Other (Low Risk)",
+      "seniorityId": "junior",
+      "seniorityLabel": "JUNIOR",
+      "adjustedScore": 4,
+      "shelfLifeYears": 7.199999999999999,
+      "countdown": {
+        "years": 7,
+        "months": 2,
+        "days": 13,
+        "totalDays": 2628
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Congratulations, you found the one job title the robots need a minute to Google. The replacement memo is drafted, it is just waiting for budget approval. Good news: you still have time to pivot before your LinkedIn headline fossilizes."
+    },
+    {
+      "occupationId": "other",
+      "occupationName": "Other (Low Risk)",
+      "seniorityId": "mid",
+      "seniorityLabel": "MID",
+      "adjustedScore": 2.5,
+      "shelfLifeYears": 9,
+      "countdown": {
+        "years": 9,
+        "months": 0,
+        "days": 0,
+        "totalDays": 3285
+      },
+      "risk": {
+        "key": "watch",
+        "label": "WATCHLIST",
+        "needlePercent": 30,
+        "needleAngle": -36,
+        "colorVar": "--neon-cyan"
+      },
+      "roast": "Congratulations, you found the one job title the robots need a minute to Google. The replacement memo is drafted, it is just waiting for budget approval. You spent years getting efficient just in time for efficiency to become the threat."
+    },
+    {
+      "occupationId": "other",
+      "occupationName": "Other (Low Risk)",
+      "seniorityId": "senior",
+      "seniorityLabel": "SENIOR",
+      "adjustedScore": 1,
+      "shelfLifeYears": 10.799999999999999,
+      "countdown": {
+        "years": 10,
+        "months": 9,
+        "days": 22,
+        "totalDays": 3942
+      },
+      "risk": {
+        "key": "low",
+        "label": "LOW RISK",
+        "needlePercent": 10,
+        "needleAngle": -72,
+        "colorVar": "--neon-green"
+      },
+      "roast": "Congratulations, you found the one job title the robots need a minute to Google. For now the machines only have you bookmarked, not scheduled. All that experience mostly means you will recognize the layoff language faster."
+    },
+    {
+      "occupationId": "other",
+      "occupationName": "Other (Low Risk)",
+      "seniorityId": "architect",
+      "seniorityLabel": "ARCHITECT",
+      "adjustedScore": 0,
+      "shelfLifeYears": 12,
+      "countdown": {
+        "years": 12,
+        "months": 0,
+        "days": 0,
+        "totalDays": 4380
+      },
+      "risk": {
+        "key": "low",
+        "label": "LOW RISK",
+        "needlePercent": 10,
+        "needleAngle": -72,
+        "colorVar": "--neon-green"
+      },
+      "roast": "Congratulations, you found the one job title the robots need a minute to Google. For now the machines only have you bookmarked, not scheduled. You climbed high enough to get a panoramic view of your own disruption."
+    }
+  ]
+}
