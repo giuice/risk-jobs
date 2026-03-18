@@ -630,12 +630,12 @@
       SENIORITY_LEVELS.forEach(function(level) {
         const btn = document.createElement('button');
         btn.className = 'exp-btn';
-        btn.setAttribute('data-id', level.id);
+        btn.setAttribute('data-id', level.experienceId);
         btn.innerHTML =
           '<span>' + level.label + '</span>' +
           '<span class="exp-label">' + level.range + '</span>';
         btn.addEventListener('click', function() {
-          selectExperience(level.id);
+          selectExperience(level.experienceId);
         });
         selector.appendChild(btn);
       });
