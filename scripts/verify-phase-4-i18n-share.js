@@ -425,7 +425,7 @@ OCCUPATIONS.forEach(function(occupation) {
   });
 });
 
-assert.equal(rows.length, 84, 'Expected 84 bilingual roast rows');
+assert.equal(rows.length, 124, 'Expected 124 bilingual roast rows');
 
 const output = {
   languages: ['en', 'ptbr'],

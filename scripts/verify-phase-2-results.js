@@ -55,11 +55,11 @@ const buildResultMatrix = sandbox.module.exports.buildResultMatrix;
 
 // ---- Assertions ----
 
-assert.equal(OCCUPATIONS.length, 21, 'OCCUPATIONS.length === 21');
+assert.equal(OCCUPATIONS.length, 31, 'OCCUPATIONS.length === 31');
 assert.equal(SENIORITY_LEVELS.length, 4, 'SENIORITY_LEVELS.length === 4');
 
 const matrix = buildResultMatrix();
-assert.equal(matrix.length, 84, 'buildResultMatrix().length === 84');
+assert.equal(matrix.length, 124, 'buildResultMatrix().length === 124');
 
 // Every row is non-null
 matrix.forEach(function(row, i) {
@@ -101,7 +101,7 @@ const pairSet = new Set();
 matrix.forEach(function(row) {
   pairSet.add(row.occupation.id + '::' + row.seniority.id);
 });
-assert.equal(pairSet.size, 84, 'unique occupation::seniority pairs === 84');
+assert.equal(pairSet.size, 124, 'unique occupation::seniority pairs === 124');
 
 // ---- Count numeric collisions (expected; not a failure) ----
 
@@ -146,9 +146,9 @@ const rows = matrix.map(function(row) {
 });
 
 const output = {
-  occupationCount: 21,
+  occupationCount: 31,
   seniorityCount: 4,
-  matrixSize: 84,
+  matrixSize: 124,
   numericCollisionCount: numericCollisionCount,
   rows: rows
 };
