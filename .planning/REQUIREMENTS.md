@@ -30,9 +30,9 @@
 ### Visual Design
 
 - [x] **VIS-01**: Page has cyberpunk terminal aesthetic (dark bg, neon glows, monospace font)
-- [ ] **VIS-02**: Text has neon glow effects using multi-layer text-shadow
-- [ ] **VIS-03**: Page has scanline overlay for CRT monitor effect
-- [ ] **VIS-04**: Glitch text animation on key headings
+- [x] **VIS-02**: Text has neon glow effects using multi-layer text-shadow
+- [x] **VIS-03**: Page has scanline overlay for CRT monitor effect
+- [x] **VIS-04**: Glitch text animation on key headings
 - [ ] **VIS-05**: Page is fully responsive on mobile devices (375px+)
 
 ### Bilingual
@@ -99,9 +99,9 @@
 | RES-03 | Phase 2 | Complete (02-01) |
 | RES-04 | Phase 2 | Complete |
 | RES-05 | Phase 2 | Complete |
-| VIS-02 | Phase 3 | Pending |
-| VIS-03 | Phase 3 | Pending |
-| VIS-04 | Phase 3 | Pending |
+| VIS-02 | Phase 3 | Complete |
+| VIS-03 | Phase 3 | Complete |
+| VIS-04 | Phase 3 | Complete |
 | VIS-05 | Phase 3 | Pending |
 | I18N-01 | Phase 4 | Pending |
 | I18N-02 | Phase 4 | Pending |
