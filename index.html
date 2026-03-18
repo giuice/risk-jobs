@@ -291,21 +291,106 @@
     ];
 
     const SENIORITY_LEVELS = [
-      { id: 'junior', label: 'JUNIOR', range: '0-2 yrs', slevel: 0 },
-      { id: 'mid', label: 'MID', range: '3-5 yrs', slevel: 1 },
-      { id: 'senior', label: 'SENIOR', range: '6-9 yrs', slevel: 2 },
-      { id: 'architect', label: 'ARCHITECT', range: '10+ yrs', slevel: 3 }
+      { id: 'junior', label: 'JUNIOR', range: '0-2 yrs', slevel: 0, experienceId: 'years-0-2' },
+      { id: 'mid', label: 'MID', range: '3-5 yrs', slevel: 1, experienceId: 'years-3-5' },
+      { id: 'senior', label: 'SENIOR', range: '6-9 yrs', slevel: 2, experienceId: 'years-6-9' },
+      { id: 'architect', label: 'ARCHITECT', range: '10+ yrs', slevel: 3, experienceId: 'years-10-plus' }
     ];
+
+    const RISK_BANDS = [
+      { key: 'low', label: 'LOW RISK', min: 0, max: 2.5, needlePercent: 10, colorVar: '--neon-green' },
+      { key: 'watch', label: 'WATCHLIST', min: 2.5, max: 4.5, needlePercent: 30, colorVar: '--neon-cyan' },
+      { key: 'exposed', label: 'EXPOSED', min: 4.5, max: 6.5, needlePercent: 50, colorVar: '--neon-yellow' },
+      { key: 'critical', label: 'CRITICAL', min: 6.5, max: 8.5, needlePercent: 72, colorVar: '--neon-pink' },
+      { key: 'doomed', label: 'DOOMED', min: 8.5, max: 10.01, needlePercent: 92, colorVar: '--neon-pink' }
+    ];
+
+    const ROAST_OPENERS = {
+      'medical-transcriptionists': 'Your headset already sounds like a museum exhibit.',
+      'software-developers': 'Your backlog now has a silicon staff engineer with no sleep cycle.',
+      'data-scientists': 'Your dashboards just discovered they can explain themselves.',
+      'financial-analysts': 'Your spreadsheet model now pitches itself to the board.',
+      'graphic-designers': 'Your moodboard just unionized under a prompt box.',
+      'financial-clerks': 'Your reconciliation ritual has been converted into autocomplete.',
+      'general-office-clerks': 'Your inbox chores are getting packaged as a platform feature.',
+      'accountants-auditors': 'Your variance check is being rebranded as instant compliance.',
+      'lawyers': 'Your billable hours just met a parser with no conscience.',
+      'paralegals': 'Your document prep is being eaten one precedent at a time.',
+      'systems-analysts': 'Your requirements workshop now speaks fluent machine certainty.',
+      'support-specialists': 'Your ticket queue just learned to close itself politely.',
+      'financial-managers': 'Your forecasting deck has started cutting you out of the meeting.',
+      'hr-specialists': 'Your interview rubric now arrives with its own synthetic recruiter.',
+      'medical-records': 'Your coding workflow is halfway to being a background daemon.',
+      'customer-service': 'Your empathy script just got productized by the minute.',
+      'secretaries': "Your calendar diplomacy is now a checkbox in someone else's SaaS.",
+      'travel-agents': 'Your itinerary magic is being flattened into one confident chatbot.',
+      'bookkeeping': 'Your payroll ritual is turning into an overnight cron job.',
+      'cashiers': 'Your lane just got challenged by a camera and a sensor grid.',
+      'other': 'Congratulations, you found the one job title the robots need a minute to Google.'
+    };
+
+    const ROAST_MIDDLES = {
+      low: 'For now the machines only have you bookmarked, not scheduled.',
+      watch: 'The replacement memo is drafted, it is just waiting for budget approval.',
+      exposed: 'You are no longer future-proof, merely future-adjacent.',
+      critical: 'The automation pilot already has your chair in its rollout plan.',
+      doomed: 'At this point the AI is basically asking where you keep the passwords.'
+    };
+
+    const ROAST_CLOSERS = {
+      junior: 'Good news: you still have time to pivot before your LinkedIn headline fossilizes.',
+      mid: 'You spent years getting efficient just in time for efficiency to become the threat.',
+      senior: 'All that experience mostly means you will recognize the layoff language faster.',
+      architect: 'You climbed high enough to get a panoramic view of your own disruption.'
+    };
 
     // ===== ENGINE =====
 
-    function calculateAdjustedScore(baseScore, slevel) {
-      const raw = baseScore - (slevel * 1.5);
-      return Math.max(0, Math.min(10, raw));
+    function getOccupationById(occupationId) {
+      for (var i = 0; i < OCCUPATIONS.length; i++) {
+        if (OCCUPATIONS[i].id === occupationId) return OCCUPATIONS[i];
+      }
+      return null;
     }
 
-    function calculateShelfLife(adjustedScore) {
-      return (10 - adjustedScore) * 1.5;
+    function getSeniorityByExperienceId(experienceId) {
+      for (var i = 0; i < SENIORITY_LEVELS.length; i++) {
+        if (SENIORITY_LEVELS[i].experienceId === experienceId) return SENIORITY_LEVELS[i];
+      }
+      return null;
+    }
+
+    function calculateAdjustedScore(baseScore, slevel) {
+      return Math.max(0, Math.min(10, baseScore - (slevel * 1.5)));
+    }
+
+    function calculateShelfLifeYears(adjustedScore) {
+      return Math.max(0, Math.min(12, (10 - adjustedScore) * 1.2));
+    }
+
+    function splitShelfLife(shelfLifeYears) {
+      var totalDays = Math.round(shelfLifeYears * 365);
+      var years = Math.floor(totalDays / 365);
+      var months = Math.floor((totalDays % 365) / 30);
+      var days = (totalDays % 365) % 30;
+      return { years: years, months: months, days: days, totalDays: totalDays };
+    }
+
+    function getRiskBand(adjustedScore) {
+      for (var i = 0; i < RISK_BANDS.length; i++) {
+        var band = RISK_BANDS[i];
+        if (adjustedScore >= band.min && adjustedScore < band.max) {
+          var needleAngle = -90 + (band.needlePercent * 1.8);
+          return {
+            key: band.key,
+            label: band.label,
+            needlePercent: band.needlePercent,
+            needleAngle: needleAngle,
+            colorVar: band.colorVar
+          };
+        }
+      }
+      return null;
     }
 
     // ===== I18N =====
