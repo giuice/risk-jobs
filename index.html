@@ -68,6 +68,11 @@
       min-height: 100vh;
     }
 
+    body[data-booting='true'] #input-view,
+    body[data-booting='true'] #results-view {
+      display: none !important;
+    }
+
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -633,7 +638,7 @@
     }
   </style>
 </head>
-<body>
+<body data-booting="true">
   <div class="language-toggle" id="language-toggle" aria-label="Language selector">
     <span class="language-toggle-label" id="language-toggle-label">Language</span>
     <button type="button" class="lang-btn" data-lang="en">EN</button>
@@ -1250,6 +1255,7 @@
       renderStaticLabels();
       if (lastResult) {
         renderResultContent(lastResult);
+        syncHashWithResult(lastResult);
       }
       updateCTA();
       syncLanguageControls();
@@ -1353,6 +1359,7 @@
       document.getElementById('input-view').style.display = 'none';
       document.getElementById('results-view').style.display = 'block';
       renderResultContent(result);
+      syncHashWithResult(result);
 
       var panel = document.getElementById('results-panel');
       var needle = document.getElementById('gauge-needle');
@@ -1491,6 +1498,30 @@
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
+    function syncHashWithResult(result) {
+      history.replaceState(null, '', buildStateUrl(buildShareState(result)));
+    }
+
+    function clearResultHash() {
+      history.replaceState(null, '', buildBasePageUrl());
+    }
+
+    function hydrateFromHash() {
+      var parsedHash = parseShareState(window.location.hash);
+      var initialLanguage = resolveInitialLanguage(parsedHash);
+      var occupation = getOccupationById(parsedHash.job);
+      var seniority = getSeniorityByExperienceId(parsedHash.exp);
+
+      if (occupation && seniority) {
+        var result = buildResultModel(parsedHash.job, parsedHash.exp);
+        applyLanguage(initialLanguage);
+        showResults(result);
+        return true;
+      }
+
+      return false;
+    }
+
     // ===== BOOT =====
 
     function resolveInitialLanguage(parsedHash) {
@@ -1509,12 +1540,14 @@
     }
 
     function init() {
-      currentLanguage = resolveInitialLanguage({ lang: '' });
+      var parsedHash = parseShareState(window.location.hash);
+      currentLanguage = resolveInitialLanguage(parsedHash);
       document.documentElement.lang = currentLanguage === 'ptbr' ? 'pt-BR' : 'en';
       document.title = t('documentTitle', currentLanguage);
       renderCards();
       renderExperienceSelector();
       renderStaticLabels();
+      updateCTA();
       syncLanguageControls();
       document.querySelectorAll('.lang-btn').forEach(function(button) {
         button.addEventListener('click', function() {
@@ -1541,8 +1574,15 @@
       });
       document.getElementById('try-again-btn').addEventListener('click', function() {
         resetResultState();
+        clearResultHash();
         showInput();
       });
+
+      if (!hydrateFromHash()) {
+        showInput();
+      }
+
+      document.body.removeAttribute('data-booting');
     }
 
     document.addEventListener('DOMContentLoaded', init);
