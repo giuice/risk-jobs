@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-stopped_at: "Completed 02-01-PLAN.md"
-last_updated: "2026-03-18T01:18:00Z"
-last_activity: "2026-03-17 — Completed plan 02-01 (Pure ENGINE pipeline: buildResultModel, buildResultMatrix, all helpers)"
+status: verifying
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-18T01:26:00.094Z"
+last_activity: "2026-03-18 — Completed plan 02-03 (Matrix verification harness: 84-row proof-of-correctness, JSON artifact with 67 numeric collisions)"
 progress:
   total_phases: 4
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
-  percent: 75
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 5
+  percent: 90
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 
 ## Current Position
 
-Phase: 2 of 4 (Engine and Results) — IN PROGRESS
-Plan: 1 of 3 in current phase — COMPLETE
-Status: Phase 2 plan 1 complete — pure ENGINE pipeline built and verified
-Last activity: 2026-03-17 — Completed plan 02-01 (Pure ENGINE pipeline: buildResultModel, buildResultMatrix, all helpers)
+Phase: 2 of 4 (Engine and Results) — IN PROGRESS (Phase 2 plan 3 of 3 COMPLETE)
+Plan: 3 of 3 in current phase — COMPLETE
+Status: Phase 2 plan 3 complete — verification harness and JSON matrix artifact built
+Last activity: 2026-03-18 — Completed plan 02-03 (Matrix verification harness: 84-row proof-of-correctness, JSON artifact with 67 numeric collisions)
 
-Progress: [███████░░░] 75% (Phase 2 in progress)
+Progress: [█████████░] 90% (Phase 2 complete, Phase 3 next)
 
 ## Performance Metrics
 
@@ -53,6 +53,9 @@ Progress: [███████░░░] 75% (Phase 2 in progress)
 | Phase 01-scaffold P01 | 2 | 2 tasks | 1 files |
 | Phase 01-scaffold P02 | 5 | 2 tasks | 0 files |
 | Phase 02-engine-and-results P01 | 2 | 2 tasks | 1 files |
+| Phase 02-engine-and-results P02 | 4 | 2 tasks | 1 files |
+| Phase 02-engine-and-results P03 | 4 | 2 tasks | 2 files |
+| Phase 02-engine-and-results P02 | 3 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -75,6 +78,11 @@ Recent decisions affecting current work:
 - [Phase 02-engine-and-results P01]: experienceId added to SENIORITY_LEVELS as explicit bridge between UI range-picker and engine lookup
 - [Phase 02-engine-and-results P01]: Shelf-life formula locked at (10-adjustedScore)*1.2 clamped 0..12 — brutal punishing range, monotonic
 - [Phase 02-engine-and-results P01]: Roast composition pattern (opener+middle+closer) yields 84 unique strings from 30 source lines, replaceable in Phase 4
+- [Phase 02-engine-and-results P03]: Verifier uses vm.runInNewContext with minimal sandbox to evaluate inline engine without DOM shim
+- [Phase 02-engine-and-results P03]: 67 numeric collisions under locked score table documented as expected metadata (numericCollisionCount), not failures
+- [Phase 02-engine-and-results]: CSS staggered reveal with 0/80/160ms transition-delay enforces countdown-gauge-roast display order visually
+- [Phase 02-engine-and-results]: requestAnimationFrame used to separate reveal class removal from addition, ensuring CSS transitions replay cleanly on each results reveal
+- [Phase 02-engine-and-results]: selectedSeniority renamed to selectedExperience to align UI state with engine experienceId bridge field
 
 ### Pending Todos
 
@@ -87,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T01:18:00Z
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-engine-and-results/02-02-PLAN.md
+Last session: 2026-03-18T01:26:00.093Z
+Stopped at: Completed 02-02-PLAN.md
+Resume file: None

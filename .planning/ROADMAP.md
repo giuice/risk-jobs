@@ -13,7 +13,7 @@ A single HTML file progresses through four build layers: scaffold and deployable
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [~] **Phase 1: Scaffold** - Deployed skeleton on GitHub Pages with input form, CSS variables, and file section structure established
-- [ ] **Phase 2: Engine and Results** - Calculation engine produces correct outputs; results page shows countdown, gauge, and roast
+- [~] **Phase 2: Engine and Results** - Calculation engine produces correct outputs; results page shows countdown, gauge, and roast; 84-row verification harness complete
 - [ ] **Phase 3: Visual Polish** - Cyberpunk aesthetics fully realized: neon glow, scanlines, glitch animation, responsive layout
 - [ ] **Phase 4: Content, i18n, and Sharing** - Bilingual roasts and UI strings, language toggle, URL hash state, social share buttons live
 
@@ -47,8 +47,8 @@ Plans:
 **Plans**: 3 plans
 Plans:
 - [x] 02-01-PLAN.md — Build the pure result-model engine, risk-band mapping, and placeholder roast composition in `index.html`
-- [ ] 02-02-PLAN.md — Replace the placeholder results screen with countdown, gauge, reveal wiring, and clean retry flow
-- [ ] 02-03-PLAN.md — Add the Node-only 21x4 verification harness and generated result-matrix artifact
+- [x] 02-02-PLAN.md — Replace the placeholder results screen with countdown, gauge, reveal wiring, and clean retry flow
+- [x] 02-03-PLAN.md — Add the Node-only 21x4 verification harness and generated result-matrix artifact
 
 ### Phase 3: Visual Polish
 **Goal**: The results page is visually dramatic enough to screenshot and share — neon glow, scanlines, glitch reveal, and responsive layout all validated including on mobile
@@ -82,6 +82,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete   | 2026-03-17 |
-| 2. Engine and Results | 1/3 | In progress | - |
+| 2. Engine and Results | 3/3 | Complete   | 2026-03-18 |
 | 3. Visual Polish | 0/TBD | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |
