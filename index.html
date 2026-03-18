@@ -788,7 +788,287 @@
 
     // ===== I18N =====
 
-    const STRINGS = { en: {}, ptbr: {} };
+    const DEFAULT_LANGUAGE = 'en';
+    const LANGUAGE_STORAGE_KEY = 'jobDeathClockLanguage';
+    const SUPPORTED_LANGUAGES = ['en', 'ptbr'];
+
+    const STRINGS = {
+      en: {
+        documentTitle: 'AI Job Death Clock',
+        inputTitle: 'AI Job Death Clock',
+        inputSubtitle: 'Find out when the machines come for your job',
+        professionLabel: 'Choose your profession',
+        experienceLabel: 'Years of experience',
+        ctaLabel: 'SEE YOUR FATE',
+        resultsTitle: 'Your fate is sealed',
+        shelfLifeHeading: 'Estimated Shelf Life',
+        automationDangerHeading: 'Automation Danger',
+        finalVerdictHeading: 'Final Verdict',
+        countdownYears: 'Years',
+        countdownMonths: 'Months',
+        countdownDays: 'Days',
+        safeLabel: 'SAFE',
+        doomedLabel: 'DOOMED',
+        tryAgainLabel: '\u21BB TRY AGAIN',
+        riskPrefix: 'Risk',
+        shareHeading: 'Share The Damage',
+        shareXLabel: 'Share on X',
+        shareWhatsAppLabel: 'Share on WhatsApp',
+        shareLinkedInLabel: 'Share on LinkedIn',
+        languageLabel: 'Language',
+        languageEnglish: 'English',
+        languagePortuguese: 'Portuguese (BR)'
+      },
+      ptbr: {
+        documentTitle: 'Relogio da Morte Profissional por IA',
+        inputTitle: 'Relogio da Morte Profissional por IA',
+        inputSubtitle: 'Descubra quando as maquinas vao chegar no seu emprego',
+        professionLabel: 'Escolha sua profissao',
+        experienceLabel: 'Anos de experiencia',
+        ctaLabel: 'VER SEU DESTINO',
+        resultsTitle: 'Seu destino esta selado',
+        shelfLifeHeading: 'Prazo de Validade Estimado',
+        automationDangerHeading: 'Perigo de Automacao',
+        finalVerdictHeading: 'Veredito Final',
+        countdownYears: 'Anos',
+        countdownMonths: 'Meses',
+        countdownDays: 'Dias',
+        safeLabel: 'SEGURO',
+        doomedLabel: 'CONDENADO',
+        tryAgainLabel: '\u21BB TENTAR DE NOVO',
+        riskPrefix: 'Risco',
+        shareHeading: 'Compartilhe o Estrago',
+        shareXLabel: 'Compartilhar no X',
+        shareWhatsAppLabel: 'Compartilhar no WhatsApp',
+        shareLinkedInLabel: 'Compartilhar no LinkedIn',
+        languageLabel: 'Idioma',
+        languageEnglish: 'Ingles',
+        languagePortuguese: 'Portugues (BR)'
+      }
+    };
+
+    const OCCUPATION_LABELS = {
+      en: {
+        'medical-transcriptionists': 'Medical Transcriptionists',
+        'software-developers': 'Software Developers / Engineers',
+        'data-scientists': 'Data Scientists / Analysts',
+        'financial-analysts': 'Financial Analysts',
+        'graphic-designers': 'Graphic Designers',
+        'financial-clerks': 'Financial Clerks',
+        'general-office-clerks': 'General Office Clerks',
+        'accountants-auditors': 'Accountants and Auditors',
+        'lawyers': 'Lawyers',
+        'paralegals': 'Paralegals & Legal Assistants',
+        'systems-analysts': 'Computer Systems Analysts',
+        'support-specialists': 'Computer Support Specialists',
+        'financial-managers': 'Financial Managers',
+        'hr-specialists': 'HR Specialists',
+        'medical-records': 'Medical Records Specialists',
+        'customer-service': 'Customer Service Representatives',
+        'secretaries': 'Secretaries & Admin Assistants',
+        'travel-agents': 'Travel Agents',
+        'bookkeeping': 'Bookkeeping / Payroll Clerks',
+        'cashiers': 'Cashiers',
+        'other': 'Other (Low Risk)'
+      },
+      ptbr: {
+        'medical-transcriptionists': 'Transcritores Medicos',
+        'software-developers': 'Desenvolvedores de Software / Engenheiros',
+        'data-scientists': 'Cientistas / Analistas de Dados',
+        'financial-analysts': 'Analistas Financeiros',
+        'graphic-designers': 'Designers Graficos',
+        'financial-clerks': 'Assistentes Financeiros',
+        'general-office-clerks': 'Auxiliares de Escritorio',
+        'accountants-auditors': 'Contadores e Auditores',
+        'lawyers': 'Advogados',
+        'paralegals': 'Paralegais e Assistentes Juridicos',
+        'systems-analysts': 'Analistas de Sistemas',
+        'support-specialists': 'Especialistas de Suporte',
+        'financial-managers': 'Gerentes Financeiros',
+        'hr-specialists': 'Especialistas de RH',
+        'medical-records': 'Especialistas em Prontuarios',
+        'customer-service': 'Atendentes de Suporte ao Cliente',
+        'secretaries': 'Secretarios e Assistentes Administrativos',
+        'travel-agents': 'Agentes de Viagem',
+        'bookkeeping': 'Assistentes de Folha e Escrituracao',
+        'cashiers': 'Caixas',
+        'other': 'Outro (Baixo Risco)'
+      }
+    };
+
+    const SENIORITY_LABELS = {
+      en: {
+        junior: 'JUNIOR',
+        mid: 'MID',
+        senior: 'SENIOR',
+        architect: 'ARCHITECT'
+      },
+      ptbr: {
+        junior: 'JUNIOR',
+        mid: 'PLENO',
+        senior: 'SENIOR',
+        architect: 'ARQUITETO'
+      }
+    };
+
+    const SENIORITY_RANGE_LABELS = {
+      en: {
+        'years-0-2': '0-2 yrs',
+        'years-3-5': '3-5 yrs',
+        'years-6-9': '6-9 yrs',
+        'years-10-plus': '10+ yrs'
+      },
+      ptbr: {
+        'years-0-2': '0-2 anos',
+        'years-3-5': '3-5 anos',
+        'years-6-9': '6-9 anos',
+        'years-10-plus': '10+ anos'
+      }
+    };
+
+    const RISK_LABELS = {
+      en: {
+        low: 'LOW RISK',
+        watch: 'WATCHLIST',
+        exposed: 'EXPOSED',
+        critical: 'CRITICAL',
+        doomed: 'DOOMED'
+      },
+      ptbr: {
+        low: 'BAIXO RISCO',
+        watch: 'EM ALERTA',
+        exposed: 'EXPOSTO',
+        critical: 'CRITICO',
+        doomed: 'CONDENADO'
+      }
+    };
+
+    const ROAST_LIBRARY = {
+      en: {
+        openers: {
+          'medical-transcriptionists': 'Your headset already sounds like a museum exhibit.',
+          'software-developers': 'Your backlog now has a silicon staff engineer with no sleep cycle.',
+          'data-scientists': 'Your dashboards just discovered they can explain themselves.',
+          'financial-analysts': 'Your spreadsheet model now pitches itself to the board.',
+          'graphic-designers': 'Your moodboard just unionized under a prompt box.',
+          'financial-clerks': 'Your reconciliation ritual has been converted into autocomplete.',
+          'general-office-clerks': 'Your inbox chores are getting packaged as a platform feature.',
+          'accountants-auditors': 'Your variance check is being rebranded as instant compliance.',
+          'lawyers': 'Your billable hours just met a parser with no conscience.',
+          'paralegals': 'Your document prep is being eaten one precedent at a time.',
+          'systems-analysts': 'Your requirements workshop now speaks fluent machine certainty.',
+          'support-specialists': 'Your ticket queue just learned to close itself politely.',
+          'financial-managers': 'Your forecasting deck has started cutting you out of the meeting.',
+          'hr-specialists': 'Your interview rubric now arrives with its own synthetic recruiter.',
+          'medical-records': 'Your coding workflow is halfway to being a background daemon.',
+          'customer-service': 'Your empathy script just got productized by the minute.',
+          'secretaries': "Your calendar diplomacy is now a checkbox in someone else's SaaS.",
+          'travel-agents': 'Your itinerary magic is being flattened into one confident chatbot.',
+          'bookkeeping': 'Your payroll ritual is turning into an overnight cron job.',
+          'cashiers': 'Your lane just got challenged by a camera and a sensor grid.',
+          'other': 'Congratulations, you found the one job title the robots need a minute to Google.'
+        },
+        middles: {
+          low: 'For now the machines only have you bookmarked, not scheduled.',
+          watch: 'The replacement memo is drafted, it is just waiting for budget approval.',
+          exposed: 'You are no longer future-proof, merely future-adjacent.',
+          critical: 'The automation pilot already has your chair in its rollout plan.',
+          doomed: 'At this point the AI is basically asking where you keep the passwords.'
+        },
+        closers: {
+          junior: 'Good news: you still have time to pivot before your LinkedIn headline fossilizes.',
+          mid: 'You spent years getting efficient just in time for efficiency to become the threat.',
+          senior: 'All that experience mostly means you will recognize the layoff language faster.',
+          architect: 'You climbed high enough to get a panoramic view of your own disruption.'
+        }
+      },
+      ptbr: {
+        openers: {
+          'medical-transcriptionists': 'Seu headset ja soa como peca de museu em liquidacao.',
+          'software-developers': 'Seu backlog acabou de ganhar um engenheiro de silicio sem sono nem ego.',
+          'data-scientists': 'Seus dashboards descobriram que conseguem se explicar sem pedir sua bencao.',
+          'financial-analysts': 'Seu modelo de planilha agora faz o pitch sozinho e ainda pede aplauso.',
+          'graphic-designers': 'Seu moodboard foi terceirizado para um prompt com autoestima demais.',
+          'financial-clerks': 'Seu ritual de conciliacao virou sugestao automatica com cafe de maquina.',
+          'general-office-clerks': 'Suas tarefas de inbox estao sendo empacotadas como recurso premium de plataforma.',
+          'accountants-auditors': 'Sua checagem de variancia esta sendo vendida como compliance instantaneo.',
+          'lawyers': 'Suas horas faturaveis conheceram um parser que nao respeita feriado nem vaidade.',
+          'paralegals': 'Sua preparacao de documentos esta sendo mastigada um precedente por vez.',
+          'systems-analysts': 'Sua oficina de requisitos agora fala com a conviccao irritante de uma maquina.',
+          'support-specialists': 'Sua fila de tickets aprendeu a se encerrar com simpatia sintetica.',
+          'financial-managers': 'Seu deck de previsao comecou a marcar reuniao sem colocar seu nome no convite.',
+          'hr-specialists': 'Sua rubrica de entrevista agora chega acompanhada de um recrutador de laboratorio.',
+          'medical-records': 'Seu fluxo de codificacao ja esta meio caminho andado para virar processo invisivel.',
+          'customer-service': 'Seu script de empatia acabou de ser empacotado e cobrado por minuto.',
+          'secretaries': 'Sua diplomacia de calendario virou checkbox em um SaaS com delirio de grandeza.',
+          'travel-agents': 'Sua magia de roteiro esta sendo achatada por um chatbot perigosamente confiante.',
+          'bookkeeping': 'Seu ritual de folha e fechamento esta virando cron job com cafeina.',
+          'cashiers': 'Seu caixa acabou de ser desafiado por camera, sensor e nenhuma paciencia humana.',
+          'other': 'Parabens, voce achou o unico cargo que os robos ainda precisam pesquisar no buscador.'
+        },
+        middles: {
+          low: 'Por enquanto as maquinas so deixaram voce nos favoritos, nao no calendario.',
+          watch: 'O memorando da substituicao ja esta rascunhado, so falta liberacao de budget.',
+          exposed: 'Voce ja nao esta protegido para o futuro, so levemente encostado nele.',
+          critical: 'O piloto de automacao ja reservou sua cadeira no cronograma de rollout.',
+          doomed: 'Nesse ponto a IA so quer saber onde ficam as senhas e o cafe.'
+        },
+        closers: {
+          junior: 'Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil.',
+          mid: 'Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca.',
+          senior: 'Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido.',
+          architect: 'Voce subiu alto o bastante para ter vista panoramica da propria substituicao.'
+        }
+      }
+    };
+
+    function isSupportedLanguage(language) {
+      return SUPPORTED_LANGUAGES.indexOf(language) !== -1;
+    }
+
+    function t(key, language) {
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      return STRINGS[resolvedLanguage][key] || STRINGS[DEFAULT_LANGUAGE][key] || key;
+    }
+
+    function getOccupationLabel(occupationId, language) {
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      return OCCUPATION_LABELS[resolvedLanguage][occupationId] ||
+        OCCUPATION_LABELS[DEFAULT_LANGUAGE][occupationId] ||
+        occupationId;
+    }
+
+    function getSeniorityLabel(seniorityId, language) {
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      return SENIORITY_LABELS[resolvedLanguage][seniorityId] ||
+        SENIORITY_LABELS[DEFAULT_LANGUAGE][seniorityId] ||
+        seniorityId;
+    }
+
+    function getSeniorityRangeLabel(experienceId, language) {
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      return SENIORITY_RANGE_LABELS[resolvedLanguage][experienceId] ||
+        SENIORITY_RANGE_LABELS[DEFAULT_LANGUAGE][experienceId] ||
+        experienceId;
+    }
+
+    function getRiskLabel(riskKey, language) {
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      return RISK_LABELS[resolvedLanguage][riskKey] ||
+        RISK_LABELS[DEFAULT_LANGUAGE][riskKey] ||
+        riskKey;
+    }
+
+    function buildLocalizedRoast(result, language) {
+      if (!result || !result.occupation || !result.seniority || !result.risk) return '';
+      var resolvedLanguage = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      var library = ROAST_LIBRARY[resolvedLanguage] || ROAST_LIBRARY[DEFAULT_LANGUAGE];
+      var opener = library.openers[result.occupation.id];
+      var middle = library.middles[result.risk.key];
+      var closer = library.closers[result.seniority.id];
+      if (!opener || !middle || !closer) return '';
+      return [opener, middle, closer].join(' ');
+    }
 
     // ===== UI =====
 
