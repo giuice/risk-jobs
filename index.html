@@ -404,12 +404,12 @@
     }
 
     /* ---- Glitch Animation (VIS-04) ---- */
-    .page-title {
+    #results-view .page-title {
       position: relative;
     }
 
-    .page-title::before,
-    .page-title::after {
+    #results-view .page-title::before,
+    #results-view .page-title::after {
       content: attr(data-text);
       position: absolute;
       inset: 0;
@@ -417,21 +417,21 @@
       overflow: hidden;
     }
 
-    .page-title::before {
+    #results-view .page-title::before {
       color: var(--neon-cyan);
       clip-path: inset(0 0 60% 0);
     }
 
-    .page-title::after {
+    #results-view .page-title::after {
       color: var(--neon-pink);
       clip-path: inset(55% 0 0 0);
     }
 
-    .page-title.glitch-active::before {
+    #results-view .page-title.glitch-active::before {
       animation: glitch-top 0.6s steps(4) 1 forwards;
     }
 
-    .page-title.glitch-active::after {
+    #results-view .page-title.glitch-active::after {
       animation: glitch-bot 0.6s steps(4) 1 forwards;
     }
 
@@ -453,8 +453,8 @@
 
     /* ---- Reduced Motion ---- */
     @media (prefers-reduced-motion: reduce) {
-      .page-title.glitch-active::before,
-      .page-title.glitch-active::after {
+      #results-view .page-title.glitch-active::before,
+      #results-view .page-title.glitch-active::after {
         animation: none;
       }
 
