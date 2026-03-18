@@ -60,7 +60,10 @@ Plans:
   3. The results section performs a glitch/CRT reveal animation when it appears (no layout jank)
   4. All animations use only transform/opacity (no box-shadow or text-shadow animation) and respect prefers-reduced-motion
   5. The page is fully usable at 375px viewport width with no horizontal scroll or overlapping elements
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Add neon glow text-shadow, CRT scanline overlay, glitch reveal animation, and reduced-motion guard
+- [ ] 03-02-PLAN.md — Add mobile responsive layout at 480px breakpoint and visual verification checkpoint
 
 ### Phase 4: Content, i18n, and Sharing
 **Goal**: The app is fully bilingual with complete roast content and working social share buttons that link to the specific result — ready to launch
@@ -83,5 +86,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete   | 2026-03-17 |
 | 2. Engine and Results | 3/3 | Complete   | 2026-03-18 |
-| 3. Visual Polish | 0/TBD | Not started | - |
+| 3. Visual Polish | 0/2 | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |
