@@ -1183,7 +1183,11 @@
         language = DEFAULT_LANGUAGE;
       }
       currentLanguage = language;
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+      try {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+      } catch (error) {
+        // Ignore storage failures so the UI can still rerender in-memory.
+      }
       document.documentElement.lang = currentLanguage === 'ptbr' ? 'pt-BR' : 'en';
       document.title = t('documentTitle', currentLanguage);
       renderCards();
@@ -1336,7 +1340,25 @@
 
     // ===== BOOT =====
 
+    function resolveInitialLanguage(parsedHash) {
+      if (parsedHash && isSupportedLanguage(parsedHash.lang)) {
+        return parsedHash.lang;
+      }
+      try {
+        var storedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+        if (isSupportedLanguage(storedLanguage)) {
+          return storedLanguage;
+        }
+      } catch (error) {
+        // Ignore storage failures and fall back to the default locale.
+      }
+      return DEFAULT_LANGUAGE;
+    }
+
     function init() {
+      currentLanguage = resolveInitialLanguage({ lang: '' });
+      document.documentElement.lang = currentLanguage === 'ptbr' ? 'pt-BR' : 'en';
+      document.title = t('documentTitle', currentLanguage);
       renderCards();
       renderExperienceSelector();
       renderStaticLabels();

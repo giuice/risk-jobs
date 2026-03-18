@@ -183,6 +183,64 @@ requiredTags.forEach(function(tag) {
   assert.ok(html.includes(tag), 'Missing metadata tag: ' + tag);
 });
 
+assert.ok(
+  html.includes('function resolveInitialLanguage(parsedHash)'),
+  'Missing resolveInitialLanguage(parsedHash) in index.html'
+);
+assert.ok(
+  html.includes('function applyLanguage(language)'),
+  'Missing applyLanguage(language) in index.html'
+);
+assert.ok(
+  html.includes('localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage)'),
+  'Missing localStorage.setItem persistence write'
+);
+assert.ok(
+  html.includes('localStorage.getItem(LANGUAGE_STORAGE_KEY)'),
+  'Missing localStorage.getItem persistence read'
+);
+assert.ok(
+  html.includes("document.documentElement.lang = currentLanguage === 'ptbr' ? 'pt-BR' : 'en'"),
+  'Missing document.documentElement.lang update'
+);
+
+const applyLanguageBlockMatch = html.match(
+  /function applyLanguage\(language\) {([\s\S]*?)function renderCards\(\)/
+);
+assert.ok(applyLanguageBlockMatch, 'Could not isolate applyLanguage block');
+assert.ok(
+  applyLanguageBlockMatch[1].includes('renderCards();'),
+  'applyLanguage should rerender occupation cards'
+);
+assert.ok(
+  applyLanguageBlockMatch[1].includes('renderExperienceSelector();'),
+  'applyLanguage should rerender experience selector'
+);
+
+const initBlockMatch = html.match(/function init\(\) {([\s\S]*?)document.addEventListener\('DOMContentLoaded', init\);/);
+assert.ok(initBlockMatch, 'Could not isolate init() block');
+assert.ok(
+  initBlockMatch[1].includes("currentLanguage = resolveInitialLanguage({ lang: '' });"),
+  'init() should resolve the initial language before first render'
+);
+assert.ok(
+  initBlockMatch[1].includes('renderCards();'),
+  'init() should render occupation cards during boot'
+);
+assert.ok(
+  initBlockMatch[1].includes('renderExperienceSelector();'),
+  'init() should render experience selector during boot'
+);
+
+const resultRenderBlockMatch = html.match(
+  /function renderResultContent\(result\) {([\s\S]*?)function syncLanguageControls\(\)/
+);
+assert.ok(resultRenderBlockMatch, 'Could not isolate renderResultContent(result) block');
+assert.ok(
+  resultRenderBlockMatch[1].includes('buildLocalizedRoast(result, currentLanguage)'),
+  'renderResultContent(result) should use buildLocalizedRoast(result, currentLanguage)'
+);
+
 assert.ok(fs.existsSync(previewImagePath), 'Missing og-preview.png in repo root');
 
 const rows = [];
