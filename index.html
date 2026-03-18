@@ -28,6 +28,22 @@
       --transition-fast: 0.15s ease;
       --transition-normal: 0.3s ease;
       --border-radius: 4px;
+      --neon-glow-green:
+        0 0 4px #fff,
+        0 0 8px rgba(0,255,65,0.8),
+        0 0 16px var(--neon-green),
+        0 0 32px var(--neon-green),
+        0 0 60px rgba(0,255,65,0.4);
+      --neon-glow-pink:
+        0 0 4px #fff,
+        0 0 8px rgba(255,46,151,0.8),
+        0 0 16px var(--neon-pink),
+        0 0 32px var(--neon-pink);
+      --neon-glow-cyan:
+        0 0 4px #fff,
+        0 0 8px rgba(0,212,255,0.8),
+        0 0 16px var(--neon-cyan),
+        0 0 28px var(--neon-cyan);
     }
 
     * {
@@ -354,6 +370,37 @@
     .try-again-btn:hover {
       box-shadow: var(--glow-cyan);
       background: rgba(0,212,255,0.1);
+    }
+
+    /* ---- Neon Glow (VIS-02) ---- */
+    .page-title {
+      text-shadow: var(--neon-glow-green);
+    }
+
+    .countdown-value {
+      text-shadow: var(--neon-glow-green);
+    }
+
+    .results-card-heading {
+      text-shadow: var(--neon-glow-cyan);
+    }
+
+    /* ---- Scanlines Overlay (VIS-03) ---- */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(0, 0, 0, 0.18) 2px,
+        rgba(0, 0, 0, 0.18) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
   </style>
 </head>
