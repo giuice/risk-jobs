@@ -82,7 +82,7 @@ Mobile layout overrides (explicit literals, not derived from the token table abo
 - `body { padding: 12px }` at `max-width: 480px` — intentional reduction below `md`, layout requirement
 - `.container { padding: 12px }` at `max-width: 480px` — intentional reduction below `md`, layout requirement
 - `.card { padding: 12px 8px }` at `max-width: 480px` — intentional reduction, layout requirement
-- `.cta-btn { padding: 14px 24px }` at `max-width: 480px` — intentional reduction with `width: 100%`
+- `.cta-btn { padding: 12px 24px }` at `max-width: 480px` — intentional reduction with `width: 100%`
 
 These 12px literals are one-off responsive exceptions; they are not token violations. Touch target for `.cta-btn` at mobile: `width: 100%` — fills container instead of fixed padding.
 
@@ -200,7 +200,7 @@ Applied changes:
 - `.card-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px }` — reduces from 160px min-width
 - `.card { padding: 12px 8px }` — reduces from 16px 12px
 - `.card .card-name { font-size: 0.78rem }` — Label-variant at mobile, reduces from 0.85rem
-- `.cta-btn { padding: 14px 24px; font-size: 1rem; width: 100% }` — full width at mobile, Heading-variant scale
+- `.cta-btn { padding: 12px 24px; font-size: 1rem; width: 100% }` — full width at mobile, Heading-variant scale
 - `.exp-btn { min-width: 120px; padding: 12px 14px; font-size: 0.8rem }` — reduces from 140px min-width
 - `.page-title { font-size: 1.3rem; letter-spacing: 1px }` — Heading role at mobile viewport
 - `.countdown-value { font-size: 2rem }` — Display role at mobile viewport
