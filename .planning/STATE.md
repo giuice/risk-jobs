@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 04-content-i18n-and-sharing-03-PLAN.md
-last_updated: "2026-03-18T11:41:09.461Z"
+stopped_at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-01-PLAN.md
+last_updated: "2026-03-18T13:32:22.044Z"
 last_activity: 2026-03-18 — Completed plan 04-03 (hash-linked result hydration, share actions, and verifier coverage)
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 4
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 13
+  completed_plans: 11
   percent: 100
 ---
 
@@ -61,6 +61,7 @@ Progress: [██████████] 100% (10 of 10 plans complete; milest
 | Phase 04-content-i18n-and-sharing P01 | 15 | 2 tasks | 4 files |
 | Phase 04-content-i18n-and-sharing P02 | 4 | 2 tasks | 2 files |
 | Phase 04-content-i18n-and-sharing P03 | 7 | 2 tasks | 2 files |
+| Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link P01 | 4 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,8 @@ Recent decisions affecting current work:
 - [Phase 04-content-i18n-and-sharing]: Shared result URLs serialize only stable job/experience/language ids in the hash so links stay locale-safe and deterministic.
 - [Phase 04-content-i18n-and-sharing]: Boot gating hides both views until hydration chooses the first visible state, preventing the input-form flash on valid shared links.
 - [Phase 04-content-i18n-and-sharing]: LinkedIn sharing remains URL-only with no text= parameter; result-specific copy stays in localized builders for X and WhatsApp.
+- [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Verifier written first with target count 31 to drive implementation (Wave 0 TDD pattern)
+- [Phase 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link]: Phase 2 and Phase 4 verifier hardcoded counts updated to 31 occupations and 124 matrix rows after data expansion
 
 ### Pending Todos
 
@@ -118,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T10:39:37.776Z
-Stopped at: Completed 04-content-i18n-and-sharing-03-PLAN.md
+Last session: 2026-03-18T13:32:22.042Z
+Stopped at: Completed 05-ux-polish-missing-professions-calculation-explainer-modal-and-article-link-01-PLAN.md
 Resume file: None
