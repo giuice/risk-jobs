@@ -402,6 +402,66 @@
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
+
+    /* ---- Glitch Animation (VIS-04) ---- */
+    .page-title {
+      position: relative;
+    }
+
+    .page-title::before,
+    .page-title::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      background: var(--bg-primary);
+      overflow: hidden;
+    }
+
+    .page-title::before {
+      color: var(--neon-cyan);
+      clip-path: inset(0 0 60% 0);
+    }
+
+    .page-title::after {
+      color: var(--neon-pink);
+      clip-path: inset(55% 0 0 0);
+    }
+
+    .page-title.glitch-active::before {
+      animation: glitch-top 0.6s steps(4) 1 forwards;
+    }
+
+    .page-title.glitch-active::after {
+      animation: glitch-bot 0.6s steps(4) 1 forwards;
+    }
+
+    @keyframes glitch-top {
+      0%   { clip-path: inset(0% 0 70% 0);  transform: translateX(-4px); }
+      25%  { clip-path: inset(15% 0 50% 0); transform: translateX(3px);  }
+      50%  { clip-path: inset(5% 0 65% 0);  transform: translateX(-2px); }
+      75%  { clip-path: inset(20% 0 40% 0); transform: translateX(4px);  }
+      100% { clip-path: inset(0 0 100% 0);  transform: translateX(0);    }
+    }
+
+    @keyframes glitch-bot {
+      0%   { clip-path: inset(60% 0 0% 0);  transform: translateX(4px);  }
+      25%  { clip-path: inset(70% 0 0 0);   transform: translateX(-3px); }
+      50%  { clip-path: inset(55% 0 0 0);   transform: translateX(2px);  }
+      75%  { clip-path: inset(75% 0 0 0);   transform: translateX(-4px); }
+      100% { clip-path: inset(100% 0 0 0);  transform: translateX(0);    }
+    }
+
+    /* ---- Reduced Motion ---- */
+    @media (prefers-reduced-motion: reduce) {
+      .page-title.glitch-active::before,
+      .page-title.glitch-active::after {
+        animation: none;
+      }
+
+      .results-panel.results-visible .results-reveal {
+        transition-duration: 0.001ms;
+      }
+    }
   </style>
 </head>
 <body>
@@ -737,6 +797,9 @@
       needle.style.transform = 'rotate(-90deg)';
 
       requestAnimationFrame(function() {
+        var title = document.querySelector('#results-view .page-title');
+        title.setAttribute('data-text', title.textContent);
+        title.classList.add('glitch-active');
         panel.classList.add('results-visible');
         needle.style.transform = 'rotate(' + result.risk.needleAngle + 'deg)';
       });
@@ -755,6 +818,7 @@
       document.getElementById('risk-score').textContent = '0.0 / 10';
       document.getElementById('roast-message').textContent = '--';
       document.getElementById('gauge-needle').style.transform = 'rotate(-90deg)';
+      document.querySelector('#results-view .page-title').classList.remove('glitch-active');
     }
 
     function showInput() {
