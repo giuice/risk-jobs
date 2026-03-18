@@ -33,7 +33,7 @@
 - [x] **VIS-02**: Text has neon glow effects using multi-layer text-shadow
 - [x] **VIS-03**: Page has scanline overlay for CRT monitor effect
 - [x] **VIS-04**: Glitch text animation on key headings
-- [ ] **VIS-05**: Page is fully responsive on mobile devices (375px+)
+- [x] **VIS-05**: Page is fully responsive on mobile devices (375px+)
 
 ### Bilingual
 
@@ -102,7 +102,7 @@
 | VIS-02 | Phase 3 | Complete |
 | VIS-03 | Phase 3 | Complete |
 | VIS-04 | Phase 3 | Complete |
-| VIS-05 | Phase 3 | Pending |
+| VIS-05 | Phase 3 | Complete |
 | I18N-01 | Phase 4 | Pending |
 | I18N-02 | Phase 4 | Pending |
 | I18N-03 | Phase 4 | Pending |

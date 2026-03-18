@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [~] **Phase 1: Scaffold** - Deployed skeleton on GitHub Pages with input form, CSS variables, and file section structure established
 - [~] **Phase 2: Engine and Results** - Calculation engine produces correct outputs; results page shows countdown, gauge, and roast; 84-row verification harness complete
-- [ ] **Phase 3: Visual Polish** - Cyberpunk aesthetics fully realized: neon glow, scanlines, glitch animation, responsive layout
+- [x] **Phase 3: Visual Polish** - Cyberpunk aesthetics fully realized: neon glow, scanlines, glitch animation, responsive layout (completed 2026-03-18)
 - [ ] **Phase 4: Content, i18n, and Sharing** - Bilingual roasts and UI strings, language toggle, URL hash state, social share buttons live
 
 ## Phase Details
@@ -86,5 +86,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete   | 2026-03-17 |
 | 2. Engine and Results | 3/3 | Complete   | 2026-03-18 |
-| 3. Visual Polish | 1/2 | In Progress|  |
+| 3. Visual Polish | 2/2 | Complete   | 2026-03-18 |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |
