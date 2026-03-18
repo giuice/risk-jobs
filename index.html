@@ -1739,11 +1739,19 @@
     }
 
     function syncHashWithResult(result) {
-      history.replaceState(null, '', buildStateUrl(buildShareState(result)));
+      try {
+        history.replaceState(null, '', buildStateUrl(buildShareState(result)));
+      } catch (e) {
+        window.location.hash = serializeShareState(buildShareState(result));
+      }
     }
 
     function clearResultHash() {
-      history.replaceState(null, '', buildBasePageUrl());
+      try {
+        history.replaceState(null, '', buildBasePageUrl());
+      } catch (e) {
+        window.location.hash = '';
+      }
     }
 
     function hydrateFromHash() {
