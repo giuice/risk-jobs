@@ -67,24 +67,26 @@ These are **text-shadow** properties (not box-shadow). Applied statically — ne
 
 ## Spacing Scale
 
-Declared values (multiples of 4):
+Declared values (all multiples of 4):
 
 | Token | Value | Usage |
 |-------|-------|-------|
 | xs | 4px | Icon gaps, letter-spacing adjustments |
 | sm | 8px | Card gap at mobile, countdown grid gap at mobile, bottom padding on labels |
-| md | 12px | Card padding at mobile, container padding at mobile |
-| lg | 16px | Default card padding, element margins |
-| xl | 20px | Default body padding, container padding, section padding |
-| 2xl | 24px | CTA button reduced horizontal padding at mobile |
-| 3xl | 30px | Section bottom margin (page-subtitle) |
+| md | 16px | Default card padding, element margins |
+| lg | 24px | Default body padding, container padding, section padding |
+| xl | 32px | CTA button horizontal padding |
+| 2xl | 48px | Section bottom margin (page-subtitle) |
 
-Exceptions:
-- Touch targets (`.cta-btn` at mobile): `width: 100%` — fills container instead of fixed padding
-- Body padding at mobile (`max-width: 480px`): reduces from 20px to 12px
-- Container padding at mobile: reduces from 20px to 12px
+Mobile layout overrides (explicit literals, not derived from the token table above):
+- `body { padding: 12px }` at `max-width: 480px` — intentional reduction below `md`, layout requirement
+- `.container { padding: 12px }` at `max-width: 480px` — intentional reduction below `md`, layout requirement
+- `.card { padding: 12px 8px }` at `max-width: 480px` — intentional reduction, layout requirement
+- `.cta-btn { padding: 14px 24px }` at `max-width: 480px` — intentional reduction with `width: 100%`
 
-Source: code inspection of existing index.html padding/gap values, RESEARCH.md Pattern 4.
+These 12px literals are one-off responsive exceptions; they are not token violations. Touch target for `.cta-btn` at mobile: `width: 100%` — fills container instead of fixed padding.
+
+Source: code inspection of existing index.html padding/gap values, RESEARCH.md Pattern 4. Token values corrected to multiples of 4 per design system contract.
 
 ---
 
@@ -92,18 +94,24 @@ Source: code inspection of existing index.html padding/gap values, RESEARCH.md P
 
 All text uses `var(--font-mono)` — Share Tech Mono, weight 400. This is a monospace family with no bold variant by design; `font-weight: bold` is used for semantic differentiation where needed.
 
+4-size scale (maximum allowed):
+
 | Role | Size | Weight | Line Height | Color | Elements |
 |------|------|--------|-------------|-------|----------|
 | Display | 3rem (desktop), 2.4rem (≤640px), 2rem (≤480px) | 400 | 1.2 | `--neon-green` | `.countdown-value` |
-| Heading | 1.8rem (desktop), 1.3rem (≤480px) | 400 | 1.2 | `--neon-green` | `.page-title` (`h1`) |
-| Subheading | 1.2rem | 400 | 1.4 | `--neon-pink` | `.cta-btn` label |
+| Heading | 1.8rem (desktop), 1.3rem (≤480px) | 400 | 1.2 | `--neon-green` | `.page-title` (`h1`); `.cta-btn` label at 1rem (≤480px) treated as Heading-variant |
 | Body | 0.9rem | 400 | 1.5 | `--text-primary` | `.page-subtitle`, `.section-label`, `#roast-message`, `.gauge-summary` |
-| Label | 0.75rem | 400 | 1.4 | `--text-secondary` | `.results-card-heading`, `.countdown-label`, gauge edge labels |
-| Micro | 0.7–0.85rem | 400 | 1.3 | `--text-secondary` | `.card-name`, `.exp-label`, `.card-risk-label` |
+| Label | 0.75rem | 400 | 1.4 | `--text-secondary` | `.results-card-heading`, `.countdown-label`, gauge edge labels, `.card-name`, `.exp-label`, `.card-risk-label` |
 
-Neon glow (`text-shadow`) is applied statically to Display and Heading roles only. Body, Label, and Micro roles receive no text-shadow.
+Notes on merges applied (from checker revision):
+- Former "Subheading" role (`.cta-btn` at 1.2rem) is collapsed into Heading as a variant. At desktop the button renders at 1.2rem; at ≤480px it scales to 1rem via the mobile override — both treated as Heading-variant, not a separate size tier.
+- Former "Micro" role (0.7–0.85rem range: `.card-name`, `.exp-label`, `.card-risk-label`) is merged into Label at 0.75rem. The 0.78rem responsive value for `.card-name` at mobile is a viewport-scaled variant of Label, not a separate role.
 
-Source: direct code inspection of index.html font-size declarations.
+Neon glow (`text-shadow`) is applied statically to Display and Heading roles only. Body and Label roles receive no text-shadow.
+
+Primary focal point: `.page-title` in results view, anchored by neon green glow and glitch reveal animation.
+
+Source: direct code inspection of index.html font-size declarations. Roles reduced from 6 to 4 per checker requirement.
 
 ---
 
@@ -131,6 +139,23 @@ Accent reserved for:
 Destructive: no destructive actions in Phase 3. Destructive color token (`--neon-pink` at 10% opacity background) exists from Phase 2 for `.cta-btn:active` — unchanged.
 
 Source: code inspection of `:root` and all selector declarations in index.html.
+
+---
+
+## Visuals
+
+Primary focal point: `.page-title` in results view, anchored by neon green glow (`--neon-glow-green` text-shadow) and glitch reveal animation. This element draws the eye first on results display before the user reads countdown or verdict cards.
+
+Visual hierarchy (results view, top to bottom):
+1. `.page-title` — Heading role, neon green glow, glitch reveal on show
+2. `.countdown-value` — Display role, neon green glow, largest numeric element
+3. Risk band label — Label role, colored by band (green/cyan/yellow/pink)
+4. Results cards (Shelf Life, Automation Danger, Final Verdict) — secondary surface, cyan headings
+
+Visual hierarchy (input view, top to bottom):
+1. `.page-title` — Heading role, neon green glow, static
+2. `.cta-btn` — Heading-variant, pink border glow, primary action
+3. Profession cards grid — secondary surface, selection state via green border
 
 ---
 
@@ -170,15 +195,15 @@ Source: code inspection of `:root` and all selector declarations in index.html.
 Breakpoint: `@media (max-width: 480px)`
 
 Applied changes:
-- `body { padding: 12px }` — reduces from 20px
-- `.container { padding: 12px }` — reduces from 20px
+- `body { padding: 12px }` — reduces from 24px (lg token)
+- `.container { padding: 12px }` — reduces from 24px (lg token)
 - `.card-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px }` — reduces from 160px min-width
 - `.card { padding: 12px 8px }` — reduces from 16px 12px
-- `.card .card-name { font-size: 0.78rem }` — reduces from 0.85rem
-- `.cta-btn { padding: 14px 24px; font-size: 1rem; width: 100% }` — full width at mobile
+- `.card .card-name { font-size: 0.78rem }` — Label-variant at mobile, reduces from 0.85rem
+- `.cta-btn { padding: 14px 24px; font-size: 1rem; width: 100% }` — full width at mobile, Heading-variant scale
 - `.exp-btn { min-width: 120px; padding: 12px 14px; font-size: 0.8rem }` — reduces from 140px min-width
-- `.page-title { font-size: 1.3rem; letter-spacing: 1px }` — reduces from 1.8rem
-- `.countdown-value { font-size: 2rem }` — reduces from 3rem
+- `.page-title { font-size: 1.3rem; letter-spacing: 1px }` — Heading role at mobile viewport
+- `.countdown-value { font-size: 2rem }` — Display role at mobile viewport
 - `.countdown-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px }` — overrides existing 640px single-column rule with 3-column at 480px
 
 Existing breakpoint at `@media (max-width: 640px)` collapses countdown grid to 1 column — Phase 3 overrides this only at 480px and below.
