@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-18T09:41:43.380Z"
-last_activity: 2026-03-18 — Completed plan 03-02 (Mobile responsive layout at 480px, glitch scoping fix, 7 Opus design improvements, all Phase 3 requirements human-verified)
+status: in_progress
+stopped_at: Completed 04-content-i18n-and-sharing-01-PLAN.md
+last_updated: "2026-03-18T10:21:41.037Z"
+last_activity: 2026-03-18 — Completed plan 04-01 (bilingual catalogs, localized roast helpers, OG metadata, verifier, and roast matrix artifact)
 progress:
   total_phases: 4
   completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
-  percent: 100
+  total_plans: 10
+  completed_plans: 8
+  percent: 80
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-17)
 
 **Core value:** The results page must be visually dramatic and genuinely funny — if people don't screenshot and share it, nothing else matters.
-**Current focus:** Phase 2 — Engine and Results
+**Current focus:** Phase 4 — Content, i18n, and Sharing
 
 ## Current Position
 
-Phase: 3 of 4 (Visual Polish) — COMPLETE (Phase 3 plan 2 of 2 COMPLETE)
-Plan: 2 of 2 in current phase — COMPLETE
-Status: Phase 3 complete — all four visual requirements (VIS-02 through VIS-05) human-verified
-Last activity: 2026-03-18 — Completed plan 03-02 (Mobile responsive layout at 480px, glitch scoping fix, 7 Opus design improvements, all Phase 3 requirements human-verified)
+Phase: 4 of 4 (Content, i18n, and Sharing) — IN PROGRESS
+Plan: 1 of 3 in current phase — COMPLETE
+Status: Phase 4 started — content/i18n/share foundation shipped; language toggle and share wiring remain
+Last activity: 2026-03-18 — Completed plan 04-01 (bilingual catalogs, localized roast helpers, OG metadata, verifier, and roast matrix artifact)
 
-Progress: [██████████] 100% (Phase 3 complete, Phase 4 share/roast next)
+Progress: [████████░░] 80% (8 of 10 plans complete; Phase 4 plan 2 next)
 
 ## Performance Metrics
 
@@ -58,6 +58,7 @@ Progress: [██████████] 100% (Phase 3 complete, Phase 4 share
 | Phase 02-engine-and-results P02 | 3 | 2 tasks | 1 files |
 | Phase 03-visual-polish P01 | 1 | 2 tasks | 1 files |
 | Phase 03-visual-polish P02 | ~30 | 2 tasks | 1 files |
+| Phase 04-content-i18n-and-sharing P01 | 15 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ Recent decisions affecting current work:
 - [Phase 03-visual-polish P02]: 480px media query placed after 640px rule — cascade order ensures narrow breakpoint's .countdown-grid 3-column override wins when both match
 - [Phase 03-visual-polish P02]: minmax(130px, 1fr) chosen for card-grid at mobile — 2 × 130px + 8px gap fits inside 327px usable width; previous 160px caused overflow
 - [Phase 03-visual-polish P02]: Glitch pseudo-elements scoped to #results-view .page-title — global .page-title selector caused ghost layers on selection-view card headings
+- [Phase 04-content-i18n-and-sharing]: The Phase 2 engine contract stays locale-agnostic; localization is resolved from stable ids in I18N helpers instead of mutating buildResultModel().
+- [Phase 04-content-i18n-and-sharing]: Phase 4 verification reads the shipped HTML's DATA, ENGINE, and I18N sections directly via regex and vm so the verifier proves the actual deployed artifact.
+- [Phase 04-content-i18n-and-sharing]: Social previews use committed static OG/Twitter metadata and a local 1200x630 image because GitHub Pages cannot serve hash-specific crawler metadata.
 
 ### Pending Todos
 
@@ -103,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T10:00:00.000Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-18T10:21:41.035Z
+Stopped at: Completed 04-content-i18n-and-sharing-01-PLAN.md
 Resume file: None

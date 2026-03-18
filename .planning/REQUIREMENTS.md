@@ -38,8 +38,8 @@
 ### Bilingual
 
 - [ ] **I18N-01**: User can toggle between English and Portuguese (PT-BR)
-- [ ] **I18N-02**: All UI text exists in both languages
-- [ ] **I18N-03**: All roast messages exist in both languages
+- [x] **I18N-02**: All UI text exists in both languages
+- [x] **I18N-03**: All roast messages exist in both languages
 - [ ] **I18N-04**: Language preference persists across page reload (localStorage)
 
 ### Sharing
@@ -48,7 +48,7 @@
 - [ ] **SHR-02**: User can share result on WhatsApp with pre-filled text
 - [ ] **SHR-03**: User can share result on LinkedIn
 - [ ] **SHR-04**: Shared URL contains result state in hash (opens results, not empty form)
-- [ ] **SHR-05**: Page has Open Graph meta tags for rich link previews
+- [x] **SHR-05**: Page has Open Graph meta tags for rich link previews
 
 ### Deployment
 
@@ -104,14 +104,14 @@
 | VIS-04 | Phase 3 | Complete |
 | VIS-05 | Phase 3 | Complete |
 | I18N-01 | Phase 4 | Pending |
-| I18N-02 | Phase 4 | Pending |
-| I18N-03 | Phase 4 | Pending |
+| I18N-02 | Phase 4 | Complete |
+| I18N-03 | Phase 4 | Complete |
 | I18N-04 | Phase 4 | Pending |
 | SHR-01 | Phase 4 | Pending |
 | SHR-02 | Phase 4 | Pending |
 | SHR-03 | Phase 4 | Pending |
 | SHR-04 | Phase 4 | Pending |
-| SHR-05 | Phase 4 | Pending |
+| SHR-05 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 30 total
