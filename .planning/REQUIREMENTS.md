@@ -14,16 +14,16 @@
 
 ### Calculation
 
-- [ ] **CALC-01**: System maps years of experience to seniority level (0-2=Junior, 3-5=Mid, 6-9=Senior, 10+=Architect)
-- [ ] **CALC-02**: System calculates adjusted exposure score: BaseScore - (Slevel x 1.5)
-- [ ] **CALC-03**: System converts adjusted score to "shelf life" (estimated years until replacement)
-- [ ] **CALC-04**: Adjusted score is clamped to 0-10 range (no negative values)
+- [x] **CALC-01**: System maps years of experience to seniority level (0-2=Junior, 3-5=Mid, 6-9=Senior, 10+=Architect)
+- [x] **CALC-02**: System calculates adjusted exposure score: BaseScore - (Slevel x 1.5)
+- [x] **CALC-03**: System converts adjusted score to "shelf life" (estimated years until replacement)
+- [x] **CALC-04**: Adjusted score is clamped to 0-10 range (no negative values)
 
 ### Results Display
 
 - [ ] **RES-01**: User sees countdown timer showing years, months, and days until AI replacement
 - [ ] **RES-02**: User sees animated risk gauge meter (safe to doomed scale)
-- [ ] **RES-03**: User sees playful-cruel roast message specific to their profession and seniority level
+- [x] **RES-03**: User sees playful-cruel roast message specific to their profession and seniority level
 - [ ] **RES-04**: Results appear with dramatic glitch/CRT reveal animation
 - [ ] **RES-05**: User can click "Try Again" to reset and try another profession
 
@@ -90,13 +90,13 @@
 | DEP-02 | Phase 1 | Pending (01-02) |
 | DEP-03 | Phase 1 | Complete (01-01) |
 | VIS-01 | Phase 1 | Complete (01-01) |
-| CALC-01 | Phase 2 | Pending |
-| CALC-02 | Phase 2 | Pending |
-| CALC-03 | Phase 2 | Pending |
-| CALC-04 | Phase 2 | Pending |
+| CALC-01 | Phase 2 | Complete (02-01) |
+| CALC-02 | Phase 2 | Complete (02-01) |
+| CALC-03 | Phase 2 | Complete (02-01) |
+| CALC-04 | Phase 2 | Complete (02-01) |
 | RES-01 | Phase 2 | Pending |
 | RES-02 | Phase 2 | Pending |
-| RES-03 | Phase 2 | Pending |
+| RES-03 | Phase 2 | Complete (02-01) |
 | RES-04 | Phase 2 | Pending |
 | RES-05 | Phase 2 | Pending |
 | VIS-02 | Phase 3 | Pending |
@@ -120,4 +120,4 @@
 
 ---
 *Requirements defined: 2026-03-17*
-*Last updated: 2026-03-17 — traceability mapped after roadmap creation*
+*Last updated: 2026-03-17 — CALC-01 through CALC-04 and RES-03 completed in 02-01*

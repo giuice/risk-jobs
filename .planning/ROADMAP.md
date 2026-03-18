@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 Plans:
 - [x] 01-01-PLAN.md — Create index.html scaffold with CSS variables, occupation data, card grid UI, and view toggling
-- [ ] 01-02-PLAN.md — Deploy to GitHub Pages and verify live site
+- [x] 01-02-PLAN.md — Deploy to GitHub Pages and verify live site
 
 ### Phase 2: Engine and Results
 **Goal**: Entering any profession and years of experience produces a correct, formula-driven countdown, gauge position, and roast message — all verified against the full 21x4 output matrix before any copy is finalized
@@ -44,7 +44,11 @@ Plans:
   3. The SVG gauge needle animates to the correct position on results reveal
   4. A roast message (placeholder text is acceptable) appears and is specific to the profession/seniority combination
   5. User can click "Try Again" to return to the input form and receive a fresh result for a different input
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [x] 02-01-PLAN.md — Build the pure result-model engine, risk-band mapping, and placeholder roast composition in `index.html`
+- [ ] 02-02-PLAN.md — Replace the placeholder results screen with countdown, gauge, reveal wiring, and clean retry flow
+- [ ] 02-03-PLAN.md — Add the Node-only 21x4 verification harness and generated result-matrix artifact
 
 ### Phase 3: Visual Polish
 **Goal**: The results page is visually dramatic enough to screenshot and share — neon glow, scanlines, glitch reveal, and responsive layout all validated including on mobile
@@ -78,6 +82,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete   | 2026-03-17 |
-| 2. Engine and Results | 0/TBD | Not started | - |
+| 2. Engine and Results | 1/3 | In progress | - |
 | 3. Visual Polish | 0/TBD | Not started | - |
 | 4. Content, i18n, and Sharing | 0/TBD | Not started | - |

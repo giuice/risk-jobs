@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-18T00:27:27.327Z"
-last_activity: "2026-03-17 — Completed plan 01-02 (GitHub Pages deployment, live at https://giuice.github.io/risk-jobs/)"
+status: in_progress
+stopped_at: "Completed 02-01-PLAN.md"
+last_updated: "2026-03-18T01:18:00Z"
+last_activity: "2026-03-17 — Completed plan 02-01 (Pure ENGINE pipeline: buildResultModel, buildResultMatrix, all helpers)"
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
-  percent: 100
+  total_plans: 3
+  completed_plans: 3
+  percent: 75
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-17)
 
 **Core value:** The results page must be visually dramatic and genuinely funny — if people don't screenshot and share it, nothing else matters.
-**Current focus:** Phase 1 — Scaffold
+**Current focus:** Phase 2 — Engine and Results
 
 ## Current Position
 
-Phase: 1 of 4 (Scaffold) — COMPLETE
-Plan: 2 of 2 in current phase — COMPLETE
-Status: Phase 1 complete, ready for Phase 2 (Formula Engine)
-Last activity: 2026-03-17 — Completed plan 01-02 (GitHub Pages deployment, live at https://giuice.github.io/risk-jobs/)
+Phase: 2 of 4 (Engine and Results) — IN PROGRESS
+Plan: 1 of 3 in current phase — COMPLETE
+Status: Phase 2 plan 1 complete — pure ENGINE pipeline built and verified
+Last activity: 2026-03-17 — Completed plan 02-01 (Pure ENGINE pipeline: buildResultModel, buildResultMatrix, all helpers)
 
-Progress: [██████████] 100% (Phase 1)
+Progress: [███████░░░] 75% (Phase 2 in progress)
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Progress: [██████████] 100% (Phase 1)
 *Updated after each plan completion*
 | Phase 01-scaffold P01 | 2 | 2 tasks | 1 files |
 | Phase 01-scaffold P02 | 5 | 2 tasks | 0 files |
+| Phase 02-engine-and-results P01 | 2 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 01-scaffold]: Share Tech Mono Google Font with Courier New/Consolas fallback ensures offline resilience
 - [Phase 01-scaffold P02]: Deploy from master branch root — no build step, index.html served directly from repo root by GitHub Pages
 - [Phase 01-scaffold P02]: Design polish deferred to Phase 3 — basic cyberpunk scaffold sufficient for deployment validation
+- [Phase 02-engine-and-results P01]: experienceId added to SENIORITY_LEVELS as explicit bridge between UI range-picker and engine lookup
+- [Phase 02-engine-and-results P01]: Shelf-life formula locked at (10-adjustedScore)*1.2 clamped 0..12 — brutal punishing range, monotonic
+- [Phase 02-engine-and-results P01]: Roast composition pattern (opener+middle+closer) yields 84 unique strings from 30 source lines, replaceable in Phase 4
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T00:27:27.324Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-engine-and-results/02-CONTEXT.md
+Last session: 2026-03-18T01:18:00Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: .planning/phases/02-engine-and-results/02-02-PLAN.md
