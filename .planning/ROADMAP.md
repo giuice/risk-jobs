@@ -92,13 +92,16 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Engine and Results | 3/3 | Complete   | 2026-03-18 |
 | 3. Visual Polish | 2/2 | Complete   | 2026-03-18 |
 | 4. Content, i18n, and Sharing | 3/3 | Complete | 2026-03-18 |
+| 5. UX Polish | 0/3 | In progress | — |
 
 ### Phase 5: UX polish, missing professions, calculation explainer modal, and article link
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** The app has 31 professions with clearer names, selection cards no longer spoil the risk score, a calculation explainer modal explains the formula to laypeople and scientists, the translated article is linked from the results view, and sharing extends to Facebook and Instagram
+**Requirements**: PROF-NEW, PROF-RENAME, CARD-UX, MODAL, ARTICLE, SHARE-FB-IG
 **Depends on:** Phase 4
-**Plans:** 0 plans
+**Plans:** 3 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 5 to break down)
+- [ ] 05-01-PLAN.md — Create Phase 5 verifier, add 10 new professions and rename 5 existing ones with full EN+PT-BR coverage
+- [ ] 05-02-PLAN.md — Remove card-risk spoiler, add explainer modal, article link, and Facebook/Instagram share buttons
+- [ ] 05-03-PLAN.md — Human verification checkpoint for all five deliverables
