@@ -1,0 +1,599 @@
+{
+  "languages": [
+    "en",
+    "ptbr"
+  ],
+  "occupationCount": 21,
+  "seniorityCount": 4,
+  "matrixSize": 84,
+  "rows": [
+    {
+      "occupationId": "medical-transcriptionists",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your headset already sounds like a museum exhibit. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu headset ja soa como peca de museu em liquidacao. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "seniorityId": "mid",
+      "riskKey": "doomed",
+      "englishRoast": "Your headset already sounds like a museum exhibit. At this point the AI is basically asking where you keep the passwords. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu headset ja soa como peca de museu em liquidacao. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "seniorityId": "senior",
+      "riskKey": "critical",
+      "englishRoast": "Your headset already sounds like a museum exhibit. The automation pilot already has your chair in its rollout plan. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu headset ja soa como peca de museu em liquidacao. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "medical-transcriptionists",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your headset already sounds like a museum exhibit. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu headset ja soa como peca de museu em liquidacao. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "software-developers",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your backlog now has a silicon staff engineer with no sleep cycle. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu backlog acabou de ganhar um engenheiro de silicio sem sono nem ego. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "software-developers",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your backlog now has a silicon staff engineer with no sleep cycle. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu backlog acabou de ganhar um engenheiro de silicio sem sono nem ego. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "software-developers",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your backlog now has a silicon staff engineer with no sleep cycle. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu backlog acabou de ganhar um engenheiro de silicio sem sono nem ego. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "software-developers",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your backlog now has a silicon staff engineer with no sleep cycle. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu backlog acabou de ganhar um engenheiro de silicio sem sono nem ego. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "data-scientists",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your dashboards just discovered they can explain themselves. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seus dashboards descobriram que conseguem se explicar sem pedir sua bencao. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "data-scientists",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your dashboards just discovered they can explain themselves. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seus dashboards descobriram que conseguem se explicar sem pedir sua bencao. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "data-scientists",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your dashboards just discovered they can explain themselves. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seus dashboards descobriram que conseguem se explicar sem pedir sua bencao. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "data-scientists",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your dashboards just discovered they can explain themselves. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seus dashboards descobriram que conseguem se explicar sem pedir sua bencao. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your spreadsheet model now pitches itself to the board. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu modelo de planilha agora faz o pitch sozinho e ainda pede aplauso. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your spreadsheet model now pitches itself to the board. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu modelo de planilha agora faz o pitch sozinho e ainda pede aplauso. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your spreadsheet model now pitches itself to the board. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu modelo de planilha agora faz o pitch sozinho e ainda pede aplauso. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "financial-analysts",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your spreadsheet model now pitches itself to the board. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu modelo de planilha agora faz o pitch sozinho e ainda pede aplauso. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your moodboard just unionized under a prompt box. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu moodboard foi terceirizado para um prompt com autoestima demais. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your moodboard just unionized under a prompt box. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu moodboard foi terceirizado para um prompt com autoestima demais. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your moodboard just unionized under a prompt box. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu moodboard foi terceirizado para um prompt com autoestima demais. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "graphic-designers",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your moodboard just unionized under a prompt box. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu moodboard foi terceirizado para um prompt com autoestima demais. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your reconciliation ritual has been converted into autocomplete. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu ritual de conciliacao virou sugestao automatica com cafe de maquina. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your reconciliation ritual has been converted into autocomplete. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu ritual de conciliacao virou sugestao automatica com cafe de maquina. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your reconciliation ritual has been converted into autocomplete. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu ritual de conciliacao virou sugestao automatica com cafe de maquina. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "financial-clerks",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your reconciliation ritual has been converted into autocomplete. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu ritual de conciliacao virou sugestao automatica com cafe de maquina. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your inbox chores are getting packaged as a platform feature. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Suas tarefas de inbox estao sendo empacotadas como recurso premium de plataforma. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your inbox chores are getting packaged as a platform feature. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Suas tarefas de inbox estao sendo empacotadas como recurso premium de plataforma. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your inbox chores are getting packaged as a platform feature. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Suas tarefas de inbox estao sendo empacotadas como recurso premium de plataforma. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "general-office-clerks",
+      "seniorityId": "architect",
+      "riskKey": "exposed",
+      "englishRoast": "Your inbox chores are getting packaged as a platform feature. You are no longer future-proof, merely future-adjacent. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Suas tarefas de inbox estao sendo empacotadas como recurso premium de plataforma. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "seniorityId": "junior",
+      "riskKey": "doomed",
+      "englishRoast": "Your variance check is being rebranded as instant compliance. At this point the AI is basically asking where you keep the passwords. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua checagem de variancia esta sendo vendida como compliance instantaneo. Nesse ponto a IA so quer saber onde ficam as senhas e o cafe. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your variance check is being rebranded as instant compliance. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua checagem de variancia esta sendo vendida como compliance instantaneo. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your variance check is being rebranded as instant compliance. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua checagem de variancia esta sendo vendida como compliance instantaneo. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "accountants-auditors",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your variance check is being rebranded as instant compliance. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua checagem de variancia esta sendo vendida como compliance instantaneo. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "lawyers",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your billable hours just met a parser with no conscience. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Suas horas faturaveis conheceram um parser que nao respeita feriado nem vaidade. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "lawyers",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your billable hours just met a parser with no conscience. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Suas horas faturaveis conheceram um parser que nao respeita feriado nem vaidade. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "lawyers",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your billable hours just met a parser with no conscience. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Suas horas faturaveis conheceram um parser que nao respeita feriado nem vaidade. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "lawyers",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your billable hours just met a parser with no conscience. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Suas horas faturaveis conheceram um parser que nao respeita feriado nem vaidade. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "paralegals",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your document prep is being eaten one precedent at a time. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua preparacao de documentos esta sendo mastigada um precedente por vez. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "paralegals",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your document prep is being eaten one precedent at a time. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua preparacao de documentos esta sendo mastigada um precedente por vez. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "paralegals",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your document prep is being eaten one precedent at a time. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua preparacao de documentos esta sendo mastigada um precedente por vez. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "paralegals",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your document prep is being eaten one precedent at a time. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua preparacao de documentos esta sendo mastigada um precedente por vez. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your requirements workshop now speaks fluent machine certainty. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua oficina de requisitos agora fala com a conviccao irritante de uma maquina. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your requirements workshop now speaks fluent machine certainty. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua oficina de requisitos agora fala com a conviccao irritante de uma maquina. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your requirements workshop now speaks fluent machine certainty. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua oficina de requisitos agora fala com a conviccao irritante de uma maquina. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "systems-analysts",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your requirements workshop now speaks fluent machine certainty. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua oficina de requisitos agora fala com a conviccao irritante de uma maquina. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "support-specialists",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your ticket queue just learned to close itself politely. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua fila de tickets aprendeu a se encerrar com simpatia sintetica. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "support-specialists",
+      "seniorityId": "mid",
+      "riskKey": "critical",
+      "englishRoast": "Your ticket queue just learned to close itself politely. The automation pilot already has your chair in its rollout plan. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua fila de tickets aprendeu a se encerrar com simpatia sintetica. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "support-specialists",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your ticket queue just learned to close itself politely. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua fila de tickets aprendeu a se encerrar com simpatia sintetica. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "support-specialists",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your ticket queue just learned to close itself politely. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua fila de tickets aprendeu a se encerrar com simpatia sintetica. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "financial-managers",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your forecasting deck has started cutting you out of the meeting. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu deck de previsao comecou a marcar reuniao sem colocar seu nome no convite. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "financial-managers",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your forecasting deck has started cutting you out of the meeting. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu deck de previsao comecou a marcar reuniao sem colocar seu nome no convite. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "financial-managers",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your forecasting deck has started cutting you out of the meeting. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu deck de previsao comecou a marcar reuniao sem colocar seu nome no convite. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "financial-managers",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your forecasting deck has started cutting you out of the meeting. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu deck de previsao comecou a marcar reuniao sem colocar seu nome no convite. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your interview rubric now arrives with its own synthetic recruiter. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua rubrica de entrevista agora chega acompanhada de um recrutador de laboratorio. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your interview rubric now arrives with its own synthetic recruiter. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua rubrica de entrevista agora chega acompanhada de um recrutador de laboratorio. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your interview rubric now arrives with its own synthetic recruiter. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua rubrica de entrevista agora chega acompanhada de um recrutador de laboratorio. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "hr-specialists",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your interview rubric now arrives with its own synthetic recruiter. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua rubrica de entrevista agora chega acompanhada de um recrutador de laboratorio. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "medical-records",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your coding workflow is halfway to being a background daemon. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu fluxo de codificacao ja esta meio caminho andado para virar processo invisivel. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "medical-records",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your coding workflow is halfway to being a background daemon. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu fluxo de codificacao ja esta meio caminho andado para virar processo invisivel. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "medical-records",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your coding workflow is halfway to being a background daemon. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu fluxo de codificacao ja esta meio caminho andado para virar processo invisivel. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "medical-records",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your coding workflow is halfway to being a background daemon. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu fluxo de codificacao ja esta meio caminho andado para virar processo invisivel. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "customer-service",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your empathy script just got productized by the minute. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu script de empatia acabou de ser empacotado e cobrado por minuto. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "customer-service",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your empathy script just got productized by the minute. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu script de empatia acabou de ser empacotado e cobrado por minuto. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "customer-service",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your empathy script just got productized by the minute. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu script de empatia acabou de ser empacotado e cobrado por minuto. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "customer-service",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your empathy script just got productized by the minute. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu script de empatia acabou de ser empacotado e cobrado por minuto. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "secretaries",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua diplomacia de calendario virou checkbox em um SaaS com delirio de grandeza. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "secretaries",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua diplomacia de calendario virou checkbox em um SaaS com delirio de grandeza. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "secretaries",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua diplomacia de calendario virou checkbox em um SaaS com delirio de grandeza. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "secretaries",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your calendar diplomacy is now a checkbox in someone else's SaaS. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua diplomacia de calendario virou checkbox em um SaaS com delirio de grandeza. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "travel-agents",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your itinerary magic is being flattened into one confident chatbot. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Sua magia de roteiro esta sendo achatada por um chatbot perigosamente confiante. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "travel-agents",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your itinerary magic is being flattened into one confident chatbot. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Sua magia de roteiro esta sendo achatada por um chatbot perigosamente confiante. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "travel-agents",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your itinerary magic is being flattened into one confident chatbot. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Sua magia de roteiro esta sendo achatada por um chatbot perigosamente confiante. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "travel-agents",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your itinerary magic is being flattened into one confident chatbot. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Sua magia de roteiro esta sendo achatada por um chatbot perigosamente confiante. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your payroll ritual is turning into an overnight cron job. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu ritual de folha e fechamento esta virando cron job com cafeina. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your payroll ritual is turning into an overnight cron job. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu ritual de folha e fechamento esta virando cron job com cafeina. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "seniorityId": "senior",
+      "riskKey": "exposed",
+      "englishRoast": "Your payroll ritual is turning into an overnight cron job. You are no longer future-proof, merely future-adjacent. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu ritual de folha e fechamento esta virando cron job com cafeina. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "bookkeeping",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your payroll ritual is turning into an overnight cron job. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu ritual de folha e fechamento esta virando cron job com cafeina. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "cashiers",
+      "seniorityId": "junior",
+      "riskKey": "critical",
+      "englishRoast": "Your lane just got challenged by a camera and a sensor grid. The automation pilot already has your chair in its rollout plan. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Seu caixa acabou de ser desafiado por camera, sensor e nenhuma paciencia humana. O piloto de automacao ja reservou sua cadeira no cronograma de rollout. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "cashiers",
+      "seniorityId": "mid",
+      "riskKey": "exposed",
+      "englishRoast": "Your lane just got challenged by a camera and a sensor grid. You are no longer future-proof, merely future-adjacent. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Seu caixa acabou de ser desafiado por camera, sensor e nenhuma paciencia humana. Voce ja nao esta protegido para o futuro, so levemente encostado nele. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "cashiers",
+      "seniorityId": "senior",
+      "riskKey": "watch",
+      "englishRoast": "Your lane just got challenged by a camera and a sensor grid. The replacement memo is drafted, it is just waiting for budget approval. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Seu caixa acabou de ser desafiado por camera, sensor e nenhuma paciencia humana. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "cashiers",
+      "seniorityId": "architect",
+      "riskKey": "watch",
+      "englishRoast": "Your lane just got challenged by a camera and a sensor grid. The replacement memo is drafted, it is just waiting for budget approval. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Seu caixa acabou de ser desafiado por camera, sensor e nenhuma paciencia humana. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    },
+    {
+      "occupationId": "other",
+      "seniorityId": "junior",
+      "riskKey": "watch",
+      "englishRoast": "Congratulations, you found the one job title the robots need a minute to Google. The replacement memo is drafted, it is just waiting for budget approval. Good news: you still have time to pivot before your LinkedIn headline fossilizes.",
+      "portugueseRoast": "Parabens, voce achou o unico cargo que os robos ainda precisam pesquisar no buscador. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Pelo lado bom, ainda da tempo de pivotar antes de sua manchete no LinkedIn virar fossil."
+    },
+    {
+      "occupationId": "other",
+      "seniorityId": "mid",
+      "riskKey": "watch",
+      "englishRoast": "Congratulations, you found the one job title the robots need a minute to Google. The replacement memo is drafted, it is just waiting for budget approval. You spent years getting efficient just in time for efficiency to become the threat.",
+      "portugueseRoast": "Parabens, voce achou o unico cargo que os robos ainda precisam pesquisar no buscador. O memorando da substituicao ja esta rascunhado, so falta liberacao de budget. Voce passou anos ficando eficiente exatamente na hora em que eficiencia virou ameaca."
+    },
+    {
+      "occupationId": "other",
+      "seniorityId": "senior",
+      "riskKey": "low",
+      "englishRoast": "Congratulations, you found the one job title the robots need a minute to Google. For now the machines only have you bookmarked, not scheduled. All that experience mostly means you will recognize the layoff language faster.",
+      "portugueseRoast": "Parabens, voce achou o unico cargo que os robos ainda precisam pesquisar no buscador. Por enquanto as maquinas so deixaram voce nos favoritos, nao no calendario. Toda essa experiencia so vai fazer voce reconhecer a linguagem da demissao mais rapido."
+    },
+    {
+      "occupationId": "other",
+      "seniorityId": "architect",
+      "riskKey": "low",
+      "englishRoast": "Congratulations, you found the one job title the robots need a minute to Google. For now the machines only have you bookmarked, not scheduled. You climbed high enough to get a panoramic view of your own disruption.",
+      "portugueseRoast": "Parabens, voce achou o unico cargo que os robos ainda precisam pesquisar no buscador. Por enquanto as maquinas so deixaram voce nos favoritos, nao no calendario. Voce subiu alto o bastante para ter vista panoramica da propria substituicao."
+    }
+  ]
+}
