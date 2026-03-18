@@ -24,8 +24,8 @@
 - [x] **RES-01**: User sees countdown timer showing years, months, and days until AI replacement
 - [x] **RES-02**: User sees animated risk gauge meter (safe to doomed scale)
 - [x] **RES-03**: User sees playful-cruel roast message specific to their profession and seniority level
-- [ ] **RES-04**: Results appear with dramatic glitch/CRT reveal animation
-- [ ] **RES-05**: User can click "Try Again" to reset and try another profession
+- [x] **RES-04**: Results appear with dramatic glitch/CRT reveal animation
+- [x] **RES-05**: User can click "Try Again" to reset and try another profession
 
 ### Visual Design
 
@@ -97,8 +97,8 @@
 | RES-01 | Phase 2 | Complete |
 | RES-02 | Phase 2 | Complete |
 | RES-03 | Phase 2 | Complete (02-01) |
-| RES-04 | Phase 2 | Pending |
-| RES-05 | Phase 2 | Pending |
+| RES-04 | Phase 2 | Complete |
+| RES-05 | Phase 2 | Complete |
 | VIS-02 | Phase 3 | Pending |
 | VIS-03 | Phase 3 | Pending |
 | VIS-04 | Phase 3 | Pending |
