@@ -162,6 +162,46 @@
       padding: 30px 0;
     }
 
+    .language-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 18px auto;
+      padding: 10px 14px;
+      border: 1px solid var(--text-dim);
+      border-radius: var(--border-radius);
+      max-width: max-content;
+      background: rgba(22, 33, 62, 0.42);
+    }
+
+    .language-toggle-label {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--text-dim);
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 8px 12px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .lang-btn.is-active {
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: var(--glow-cyan);
+      background: rgba(0, 212, 255, 0.08);
+    }
+
     .cta-btn {
       background: transparent;
       border: 2px solid var(--neon-pink);
@@ -400,6 +440,7 @@
     /* ---- Focus States ---- */
     .card:focus-visible,
     .exp-btn:focus-visible,
+    .lang-btn:focus-visible,
     .cta-btn:focus-visible,
     .try-again-btn:focus-visible {
       outline: 2px solid var(--neon-cyan);
@@ -550,18 +591,23 @@
   </style>
 </head>
 <body>
+  <div class="language-toggle" id="language-toggle" aria-label="Language selector">
+    <span class="language-toggle-label" id="language-toggle-label">Language</span>
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="ptbr">PT-BR</button>
+  </div>
 
   <div id="input-view">
     <div class="container">
-      <h1 class="page-title">AI Job Death Clock</h1>
-      <p class="page-subtitle">Find out when the machines come for your job</p>
+      <h1 class="page-title" id="input-title">AI Job Death Clock</h1>
+      <p class="page-subtitle" id="input-subtitle">Find out when the machines come for your job</p>
 
-      <div class="section-label">Choose your profession</div>
+      <div class="section-label" id="profession-label">Choose your profession</div>
       <div class="card-grid" id="card-grid">
         <!-- Cards rendered by JS -->
       </div>
 
-      <div class="section-label">Years of experience</div>
+      <div class="section-label" id="experience-label">Years of experience</div>
       <div class="experience-selector" id="experience-selector">
         <!-- Buttons rendered by JS -->
       </div>
@@ -574,31 +620,31 @@
 
   <div id="results-view">
     <div class="container">
-      <h1 class="page-title">Your fate is sealed</h1>
+      <h1 class="page-title" id="results-title">Your fate is sealed</h1>
       <div class="results-panel" id="results-panel">
 
         <p class="result-job-name" id="result-job-name">--</p>
 
         <section class="results-card results-reveal countdown-card">
-          <p class="results-card-heading">Estimated Shelf Life</p>
+          <p class="results-card-heading" id="countdown-heading">Estimated Shelf Life</p>
           <div class="countdown-grid">
             <div class="countdown-unit">
               <span class="countdown-value" id="countdown-years">0</span>
-              <span class="countdown-label">Years</span>
+              <span class="countdown-label" id="countdown-years-label">Years</span>
             </div>
             <div class="countdown-unit">
               <span class="countdown-value" id="countdown-months">0</span>
-              <span class="countdown-label">Months</span>
+              <span class="countdown-label" id="countdown-months-label">Months</span>
             </div>
             <div class="countdown-unit">
               <span class="countdown-value" id="countdown-days">0</span>
-              <span class="countdown-label">Days</span>
+              <span class="countdown-label" id="countdown-days-label">Days</span>
             </div>
           </div>
         </section>
 
         <section class="results-card results-reveal gauge-card">
-          <p class="results-card-heading">Automation Danger</p>
+          <p class="results-card-heading" id="gauge-heading">Automation Danger</p>
           <svg class="gauge-svg" viewBox="0 0 240 160" aria-hidden="true">
             <path class="gauge-arc-bg" d="M20 140 A100 100 0 0 1 220 140" />
             <path class="gauge-arc-zone" d="M20 140 A100 100 0 0 1 70 58" style="stroke: var(--neon-green); opacity: 0.3" />
@@ -609,8 +655,8 @@
               <line class="gauge-needle-line" x1="120" y1="140" x2="120" y2="52" />
             </g>
             <circle class="gauge-cap" cx="120" cy="140" r="8" />
-            <text class="gauge-label-edge" x="14" y="158">SAFE</text>
-            <text class="gauge-label-edge" x="195" y="158">DOOMED</text>
+            <text class="gauge-label-edge" id="gauge-safe-label" x="14" y="158">SAFE</text>
+            <text class="gauge-label-edge" id="gauge-doomed-label" x="195" y="158">DOOMED</text>
           </svg>
           <div class="gauge-summary">
             <span id="risk-label">--</span>
@@ -619,7 +665,7 @@
         </section>
 
         <section class="results-card results-reveal roast-card">
-          <p class="results-card-heading">Final Verdict</p>
+          <p class="results-card-heading" id="roast-heading">Final Verdict</p>
           <p id="roast-message">--</p>
         </section>
 
@@ -1084,18 +1130,95 @@
     let selectedOccupation = null;
     let selectedExperience = null;
     let lastResult = null;
+    let currentLanguage = DEFAULT_LANGUAGE;
+
+    function renderStaticLabels() {
+      document.getElementById('input-title').textContent = t('inputTitle', currentLanguage);
+      document.getElementById('input-subtitle').textContent = t('inputSubtitle', currentLanguage);
+      document.getElementById('profession-label').textContent = t('professionLabel', currentLanguage);
+      document.getElementById('experience-label').textContent = t('experienceLabel', currentLanguage);
+      document.getElementById('cta-btn').textContent = t('ctaLabel', currentLanguage);
+      document.getElementById('results-title').textContent = t('resultsTitle', currentLanguage);
+      document.getElementById('results-title').setAttribute('data-text', t('resultsTitle', currentLanguage));
+      document.getElementById('countdown-heading').textContent = t('shelfLifeHeading', currentLanguage);
+      document.getElementById('countdown-years-label').textContent = t('countdownYears', currentLanguage);
+      document.getElementById('countdown-months-label').textContent = t('countdownMonths', currentLanguage);
+      document.getElementById('countdown-days-label').textContent = t('countdownDays', currentLanguage);
+      document.getElementById('gauge-heading').textContent = t('automationDangerHeading', currentLanguage);
+      document.getElementById('gauge-safe-label').textContent = t('safeLabel', currentLanguage);
+      document.getElementById('gauge-doomed-label').textContent = t('doomedLabel', currentLanguage);
+      document.getElementById('roast-heading').textContent = t('finalVerdictHeading', currentLanguage);
+      document.getElementById('try-again-btn').textContent = t('tryAgainLabel', currentLanguage);
+      document.getElementById('language-toggle-label').textContent = t('languageLabel', currentLanguage);
+      document.querySelector('.lang-btn[data-lang="en"]').setAttribute('aria-label', t('languageEnglish', currentLanguage));
+      document.querySelector('.lang-btn[data-lang="ptbr"]').setAttribute('aria-label', t('languagePortuguese', currentLanguage));
+    }
+
+    function renderResultContent(result) {
+      if (!result) return;
+      document.getElementById('result-job-name').textContent =
+        getOccupationLabel(result.occupation.id, currentLanguage) +
+        ' // ' +
+        getSeniorityLabel(result.seniority.id, currentLanguage);
+      document.getElementById('countdown-years').textContent = String(result.countdown.years);
+      document.getElementById('countdown-months').textContent = String(result.countdown.months);
+      document.getElementById('countdown-days').textContent = String(result.countdown.days);
+      document.getElementById('risk-label').textContent = getRiskLabel(result.risk.key, currentLanguage);
+      document.getElementById('risk-label').style.color = 'var(' + result.risk.colorVar + ')';
+      document.getElementById('risk-score').textContent =
+        t('riskPrefix', currentLanguage) + ': ' + result.adjustedScore.toFixed(1) + ' / 10';
+      document.getElementById('roast-message').textContent = buildLocalizedRoast(result, currentLanguage);
+    }
+
+    function syncLanguageControls() {
+      document.querySelectorAll('.lang-btn').forEach(function(button) {
+        var isActive = button.dataset.lang === currentLanguage;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    function applyLanguage(language) {
+      if (!isSupportedLanguage(language)) {
+        language = DEFAULT_LANGUAGE;
+      }
+      currentLanguage = language;
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+      document.documentElement.lang = currentLanguage === 'ptbr' ? 'pt-BR' : 'en';
+      document.title = t('documentTitle', currentLanguage);
+      renderCards();
+      renderExperienceSelector();
+      renderStaticLabels();
+      if (lastResult) {
+        renderResultContent(lastResult);
+      }
+      updateCTA();
+      syncLanguageControls();
+    }
 
     function renderCards() {
       const grid = document.getElementById('card-grid');
+      grid.replaceChildren();
       OCCUPATIONS.forEach(function(occ) {
         const card = document.createElement('div');
         card.className = 'card';
         card.setAttribute('data-id', occ.id);
-        card.innerHTML =
-          '<div class="card-name">' + occ.name + '</div>' +
-          '<div class="card-risk">Risk: ' + occ.baseScore + '/10</div>';
+        if (occ.id === selectedOccupation) {
+          card.classList.add('selected');
+        }
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
+
+        const cardName = document.createElement('div');
+        cardName.className = 'card-name';
+        cardName.textContent = getOccupationLabel(occ.id, currentLanguage);
+
+        const cardRisk = document.createElement('div');
+        cardRisk.className = 'card-risk';
+        cardRisk.textContent = t('riskPrefix', currentLanguage) + ': ' + occ.baseScore + '/10';
+
+        card.appendChild(cardName);
+        card.appendChild(cardRisk);
         card.addEventListener('click', function() {
           selectCard(occ.id);
         });
@@ -1111,13 +1234,25 @@
 
     function renderExperienceSelector() {
       const selector = document.getElementById('experience-selector');
+      selector.replaceChildren();
       SENIORITY_LEVELS.forEach(function(level) {
         const btn = document.createElement('button');
         btn.className = 'exp-btn';
         btn.setAttribute('data-id', level.experienceId);
-        btn.innerHTML =
-          '<span>' + level.label + '</span>' +
-          '<span class="exp-label">' + level.range + '</span>';
+        btn.type = 'button';
+        if (level.experienceId === selectedExperience) {
+          btn.classList.add('selected');
+        }
+
+        const label = document.createElement('span');
+        label.textContent = getSeniorityLabel(level.id, currentLanguage);
+
+        const range = document.createElement('span');
+        range.className = 'exp-label';
+        range.textContent = getSeniorityRangeLabel(level.experienceId, currentLanguage);
+
+        btn.appendChild(label);
+        btn.appendChild(range);
         btn.addEventListener('click', function() {
           selectExperience(level.experienceId);
         });
@@ -1158,15 +1293,7 @@
       lastResult = result;
       document.getElementById('input-view').style.display = 'none';
       document.getElementById('results-view').style.display = 'block';
-
-      document.getElementById('result-job-name').textContent = result.occupation.name + ' // ' + result.seniority.label;
-      document.getElementById('countdown-years').textContent = String(result.countdown.years);
-      document.getElementById('countdown-months').textContent = String(result.countdown.months);
-      document.getElementById('countdown-days').textContent = String(result.countdown.days);
-      document.getElementById('risk-label').textContent = result.risk.label;
-      document.getElementById('risk-label').style.color = 'var(' + result.risk.colorVar + ')';
-      document.getElementById('risk-score').textContent = result.adjustedScore.toFixed(1) + ' / 10';
-      document.getElementById('roast-message').textContent = result.roast;
+      renderResultContent(result);
 
       var panel = document.getElementById('results-panel');
       var needle = document.getElementById('gauge-needle');
@@ -1174,7 +1301,7 @@
       needle.style.transform = 'rotate(-90deg)';
 
       requestAnimationFrame(function() {
-        var title = document.querySelector('#results-view .page-title');
+        var title = document.getElementById('results-title');
         title.setAttribute('data-text', title.textContent);
         title.classList.add('glitch-active');
         panel.classList.add('results-visible');
@@ -1212,6 +1339,13 @@
     function init() {
       renderCards();
       renderExperienceSelector();
+      renderStaticLabels();
+      syncLanguageControls();
+      document.querySelectorAll('.lang-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+          applyLanguage(button.dataset.lang);
+        });
+      });
       document.getElementById('cta-btn').addEventListener('click', function() {
         var result = buildResultModel(selectedOccupation, selectedExperience);
         if (result) {
