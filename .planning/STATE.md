@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-stopped_at: Completed 04-content-i18n-and-sharing-02-PLAN.md
-last_updated: "2026-03-18T10:29:17.188Z"
-last_activity: 2026-03-18 — Completed plan 04-02 (live language toggle, localized rerendering, persistence wiring, and verifier coverage)
+status: complete
+stopped_at: Completed 04-content-i18n-and-sharing-03-PLAN.md
+last_updated: "2026-03-18T10:39:37.778Z"
+last_activity: 2026-03-18 — Completed plan 04-03 (hash-linked result hydration, share actions, and verifier coverage)
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 10
-  completed_plans: 9
-  percent: 90
+  completed_plans: 10
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-17)
 
 **Core value:** The results page must be visually dramatic and genuinely funny — if people don't screenshot and share it, nothing else matters.
-**Current focus:** Phase 4 — Content, i18n, and Sharing
+**Current focus:** Milestone complete — all four phases shipped
 
 ## Current Position
 
-Phase: 4 of 4 (Content, i18n, and Sharing) — IN PROGRESS
-Plan: 2 of 3 in current phase — COMPLETE
-Status: Phase 4 in progress — live language toggle and persisted bilingual rerendering shipped; share/hash hydration remains
-Last activity: 2026-03-18 — Completed plan 04-02 (live language toggle, localized rerendering, persistence wiring, and verifier coverage)
+Phase: 4 of 4 (Content, i18n, and Sharing) — COMPLETE
+Plan: 3 of 3 in current phase — COMPLETE
+Status: Milestone complete — bilingual content, persisted language switching, share-state URLs, and social share actions shipped
+Last activity: 2026-03-18 — Completed plan 04-03 (hash-linked result hydration, share actions, and verifier coverage)
 
-Progress: [█████████░] 90% (9 of 10 plans complete; Phase 4 plan 3 next)
+Progress: [██████████] 100% (10 of 10 plans complete; milestone complete)
 
 ## Performance Metrics
 
@@ -60,6 +60,7 @@ Progress: [█████████░] 90% (9 of 10 plans complete; Phase 4 
 | Phase 03-visual-polish P02 | ~30 | 2 tasks | 1 files |
 | Phase 04-content-i18n-and-sharing P01 | 15 | 2 tasks | 4 files |
 | Phase 04-content-i18n-and-sharing P02 | 4 | 2 tasks | 2 files |
+| Phase 04-content-i18n-and-sharing P03 | 7 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -98,6 +99,9 @@ Recent decisions affecting current work:
 - [Phase 04-content-i18n-and-sharing]: Social previews use committed static OG/Twitter metadata and a local 1200x630 image because GitHub Pages cannot serve hash-specific crawler metadata.
 - [Phase 04-content-i18n-and-sharing]: Language switching rerenders only the existing UI lists and targeted label nodes; the Phase 2 engine contract remains locale-agnostic.
 - [Phase 04-content-i18n-and-sharing]: Initial locale resolution order is shared-link hash override first, then localStorage, then DEFAULT_LANGUAGE.
+- [Phase 04-content-i18n-and-sharing]: Shared result URLs serialize only stable job/experience/language ids in the hash so links stay locale-safe and deterministic.
+- [Phase 04-content-i18n-and-sharing]: Boot gating hides both views until hydration chooses the first visible state, preventing the input-form flash on valid shared links.
+- [Phase 04-content-i18n-and-sharing]: LinkedIn sharing remains URL-only with no text= parameter; result-specific copy stays in localized builders for X and WhatsApp.
 
 ### Pending Todos
 
@@ -110,6 +114,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T10:29:17.187Z
-Stopped at: Completed 04-content-i18n-and-sharing-02-PLAN.md
+Last session: 2026-03-18T10:39:37.776Z
+Stopped at: Completed 04-content-i18n-and-sharing-03-PLAN.md
 Resume file: None

@@ -44,10 +44,10 @@
 
 ### Sharing
 
-- [ ] **SHR-01**: User can share result on Twitter/X with pre-filled text
-- [ ] **SHR-02**: User can share result on WhatsApp with pre-filled text
-- [ ] **SHR-03**: User can share result on LinkedIn
-- [ ] **SHR-04**: Shared URL contains result state in hash (opens results, not empty form)
+- [x] **SHR-01**: User can share result on Twitter/X with pre-filled text
+- [x] **SHR-02**: User can share result on WhatsApp with pre-filled text
+- [x] **SHR-03**: User can share result on LinkedIn
+- [x] **SHR-04**: Shared URL contains result state in hash (opens results, not empty form)
 - [x] **SHR-05**: Page has Open Graph meta tags for rich link previews
 
 ### Deployment
@@ -107,10 +107,10 @@
 | I18N-02 | Phase 4 | Complete |
 | I18N-03 | Phase 4 | Complete |
 | I18N-04 | Phase 4 | Complete |
-| SHR-01 | Phase 4 | Pending |
-| SHR-02 | Phase 4 | Pending |
-| SHR-03 | Phase 4 | Pending |
-| SHR-04 | Phase 4 | Pending |
+| SHR-01 | Phase 4 | Complete |
+| SHR-02 | Phase 4 | Complete |
+| SHR-03 | Phase 4 | Complete |
+| SHR-04 | Phase 4 | Complete |
 | SHR-05 | Phase 4 | Complete |
 
 **Coverage:**
@@ -120,4 +120,4 @@
 
 ---
 *Requirements defined: 2026-03-17*
-*Last updated: 2026-03-17 — CALC-01 through CALC-04 and RES-03 completed in 02-01*
+*Last updated: 2026-03-18 — SHR-01 through SHR-04 completed in 04-03; all v1 requirements now complete*
