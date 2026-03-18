@@ -80,7 +80,7 @@
       padding: 16px 12px;
       cursor: pointer;
       text-align: center;
-      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
     }
 
     .card:hover {
@@ -91,6 +91,7 @@
     .card.selected {
       border-color: var(--neon-green);
       box-shadow: var(--glow-green);
+      background: var(--bg-card-selected);
     }
 
     .card .card-name {
@@ -302,6 +303,11 @@
       stroke-width: 6;
     }
 
+    .gauge-arc-zone {
+      fill: none;
+      stroke-width: 6;
+    }
+
     .gauge-needle-line {
       stroke: var(--neon-pink);
       stroke-width: 3;
@@ -342,16 +348,26 @@
       color: var(--text-secondary);
     }
 
+    .roast-card {
+      border-color: var(--neon-pink);
+      border-left: 3px solid var(--neon-pink);
+    }
+
     #roast-message {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.7;
       color: var(--text-primary);
       margin: 0;
+      font-style: italic;
     }
 
     @media (max-width: 640px) {
-      .countdown-grid { grid-template-columns: 1fr; }
       .countdown-value { font-size: 2.4rem; }
+    }
+
+    .try-again-container {
+      text-align: center;
+      margin-top: 32px;
     }
 
     .try-again-btn {
@@ -370,6 +386,16 @@
     .try-again-btn:hover {
       box-shadow: var(--glow-cyan);
       background: rgba(0,212,255,0.1);
+    }
+
+    /* ---- Focus States ---- */
+    .card:focus-visible,
+    .exp-btn:focus-visible,
+    .cta-btn:focus-visible,
+    .try-again-btn:focus-visible {
+      outline: 2px solid var(--neon-cyan);
+      outline-offset: 2px;
+      box-shadow: var(--glow-cyan);
     }
 
     /* ---- Neon Glow (VIS-02) ---- */
@@ -566,6 +592,10 @@
           <p class="results-card-heading">Automation Danger</p>
           <svg class="gauge-svg" viewBox="0 0 240 160" aria-hidden="true">
             <path class="gauge-arc-bg" d="M20 140 A100 100 0 0 1 220 140" />
+            <path class="gauge-arc-zone" d="M20 140 A100 100 0 0 1 70 58" style="stroke: var(--neon-green); opacity: 0.3" />
+            <path class="gauge-arc-zone" d="M70 58 A100 100 0 0 1 120 40" style="stroke: var(--neon-cyan); opacity: 0.3" />
+            <path class="gauge-arc-zone" d="M120 40 A100 100 0 0 1 170 58" style="stroke: var(--neon-yellow); opacity: 0.3" />
+            <path class="gauge-arc-zone" d="M170 58 A100 100 0 0 1 220 140" style="stroke: var(--neon-pink); opacity: 0.3" />
             <g id="gauge-needle">
               <line class="gauge-needle-line" x1="120" y1="140" x2="120" y2="52" />
             </g>
@@ -585,7 +615,7 @@
         </section>
 
       </div>
-      <div style="text-align: center; margin-top: 30px;">
+      <div class="try-again-container">
         <button class="try-again-btn" id="try-again-btn">&#x21BB; TRY AGAIN</button>
       </div>
     </div>
@@ -775,8 +805,16 @@
         card.innerHTML =
           '<div class="card-name">' + occ.name + '</div>' +
           '<div class="card-risk">Risk: ' + occ.baseScore + '/10</div>';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
         card.addEventListener('click', function() {
           selectCard(occ.id);
+        });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectCard(occ.id);
+          }
         });
         grid.appendChild(card);
       });
