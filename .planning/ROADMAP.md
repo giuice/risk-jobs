@@ -92,3 +92,13 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Engine and Results | 3/3 | Complete   | 2026-03-18 |
 | 3. Visual Polish | 2/2 | Complete   | 2026-03-18 |
 | 4. Content, i18n, and Sharing | 3/3 | Complete | 2026-03-18 |
+
+### Phase 5: UX polish, missing professions, calculation explainer modal, and article link
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 4
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 5 to break down)

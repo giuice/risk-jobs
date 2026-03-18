@@ -107,6 +107,10 @@ Recent decisions affecting current work:
 
 None yet.
 
+### Roadmap Evolution
+
+- Phase 5 added: UX polish, missing professions, calculation explainer modal, and article link
+
 ### Blockers/Concerns
 
 - Occupation base scores (provided in PROJECT.md) should be reviewed/approved before Phase 2 formula work begins
