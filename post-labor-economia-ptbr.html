@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Os 7 Frameworks para Entender a Economia Pós-Trabalho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#030712;
+      --bg2:#0b1230;
+      --bg3:#0d1b45;
+      --card:rgba(8,12,32,.78);
+      --card-strong:rgba(14,22,56,.92);
+      --text:#eef4ff;
+      --muted:#8a9bc8;
+      --accent:#5ee6ff;
+      --accent2:#8b7cff;
+      --accent3:#53f3c3;
+      --accent4:#ff6b9d;
+      --line:rgba(135,168,255,.12);
+      --line-strong:rgba(94,230,255,.34);
+      --glow:0 18px 60px rgba(0,0,0,.5);
+      --glow2:0 0 0 1px rgba(94,230,255,.1), 0 0 40px rgba(94,230,255,.06), 0 0 100px rgba(139,124,255,.06);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    html{scroll-behavior:smooth}
+
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.78;
+      letter-spacing:.01em;
+      overflow-x:hidden;
+    }
+
+    /* ── Animated background ── */
+    .bg-aurora{
+      position:fixed; inset:0; pointer-events:none; z-index:0;
+      overflow:hidden;
+    }
+    .bg-aurora::before{
+      content:"";
+      position:absolute; width:150%; height:150%; top:-25%; left:-25%;
+      background:
+        radial-gradient(ellipse 600px 400px at 20% 15%, rgba(94,230,255,.12), transparent),
+        radial-gradient(ellipse 500px 500px at 80% 10%, rgba(139,124,255,.1), transparent),
+        radial-gradient(ellipse 400px 300px at 60% 85%, rgba(83,243,195,.06), transparent),
+        radial-gradient(ellipse 350px 350px at 10% 80%, rgba(255,107,157,.05), transparent);
+      animation: auroraShift 20s ease-in-out infinite alternate;
+    }
+    @keyframes auroraShift{
+      0%{ transform: translate(0,0) rotate(0deg) scale(1) }
+      33%{ transform: translate(3%,-2%) rotate(1deg) scale(1.02) }
+      66%{ transform: translate(-2%,3%) rotate(-0.5deg) scale(0.98) }
+      100%{ transform: translate(1%,-1%) rotate(0.5deg) scale(1.01) }
+    }
+
+    /* ── Grid overlay ── */
+    .bg-grid{
+      position:fixed; inset:0; pointer-events:none; z-index:1;
+      opacity:.3;
+      background-image:
+        linear-gradient(rgba(94,230,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(94,230,255,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%);
+    }
+
+    /* ── Floating particles ── */
+    .particles{
+      position:fixed; inset:0; pointer-events:none; z-index:1;
+    }
+    .particle{
+      position:absolute;
+      width:3px; height:3px;
+      border-radius:50%;
+      background:var(--accent);
+      opacity:0;
+      animation: particleFloat linear infinite;
+    }
+    .particle:nth-child(odd){ background:var(--accent2) }
+    .particle:nth-child(3n){ background:var(--accent3); width:2px; height:2px }
+    @keyframes particleFloat{
+      0%{ opacity:0; transform:translateY(100vh) scale(0) }
+      10%{ opacity:.6 }
+      90%{ opacity:.6 }
+      100%{ opacity:0; transform:translateY(-10vh) scale(1) }
+    }
+
+    /* ── Reading progress bar ── */
+    .progress-bar{
+      position:fixed; top:0; left:0; height:2px; z-index:1000;
+      background:linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      width:0%;
+      transition: width 50ms linear;
+      box-shadow:0 0 12px var(--accent), 0 0 30px rgba(94,230,255,.3);
+    }
+
+    /* ── Container ── */
+    .container{
+      max-width:1180px; margin:0 auto; padding:32px 20px 80px;
+      position:relative; z-index:2;
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal{
+      opacity:0;
+      transform:translateY(32px);
+      transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* ── Hero ── */
+    .hero{
+      padding:64px 40px 56px;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:32px;
+      box-shadow:var(--glow), var(--glow2);
+      position:relative;
+      overflow:hidden;
+      backdrop-filter: blur(20px);
+      isolation:isolate;
+    }
+    /* Animated top border */
+    .hero::before{
+      content:"";
+      position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg, transparent, var(--accent), var(--accent2), var(--accent3), transparent);
+      background-size:200% 100%;
+      animation: shimmerBorder 4s ease-in-out infinite;
+    }
+    @keyframes shimmerBorder{
+      0%{ background-position:200% 0 }
+      100%{ background-position:-200% 0 }
+    }
+    /* Glow orbs */
+    .hero::after{
+      content:"";
+      position:absolute; width:400px; height:400px; right:-120px; top:-100px;
+      background:radial-gradient(circle, rgba(94,230,255,.15), transparent 65%);
+      filter:blur(20px);
+      z-index:-1;
+      animation: orbPulse 6s ease-in-out infinite alternate;
+    }
+    .hero-orb-left{
+      position:absolute; width:350px; height:350px; left:-100px; bottom:-100px;
+      background:radial-gradient(circle, rgba(139,124,255,.12), transparent 65%);
+      filter:blur(20px);
+      z-index:-1;
+      animation: orbPulse 8s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes orbPulse{
+      0%{ opacity:.6; transform:scale(1) }
+      100%{ opacity:1; transform:scale(1.15) }
+    }
+
+    .hero-badge{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:6px 14px; border-radius:999px;
+      background:linear-gradient(135deg, rgba(94,230,255,.12), rgba(139,124,255,.12));
+      border:1px solid rgba(94,230,255,.2);
+      font-size:.82rem; font-weight:600; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--accent);
+      margin-bottom:20px;
+    }
+    .hero-badge::before{
+      content:""; display:block; width:6px; height:6px; border-radius:50%;
+      background:var(--accent3);
+      box-shadow:0 0 8px var(--accent3);
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    @keyframes dotPulse{
+      0%,100%{ opacity:1 }
+      50%{ opacity:.3 }
+    }
+
+    h1{
+      font-size:clamp(2.4rem,5vw,4rem);
+      line-height:1.05;
+      margin:0 0 18px;
+      letter-spacing:-.04em;
+      font-weight:900;
+      background:linear-gradient(135deg, #fff 0%, #d0e8ff 40%, var(--accent) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .subtitle{
+      font-size:1.12rem; color:var(--muted); max-width:800px;
+      line-height:1.7;
+    }
+    .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px}
+    .tag{
+      padding:8px 16px; border-radius:999px;
+      border:1px solid rgba(94,230,255,.15);
+      background:rgba(94,230,255,.06);
+      color:#c0eeff; font-size:.88rem; font-weight:500;
+      transition: all .3s ease;
+      cursor:default;
+    }
+    .tag:hover{
+      border-color:rgba(94,230,255,.4);
+      background:rgba(94,230,255,.12);
+      box-shadow:0 0 20px rgba(94,230,255,.1);
+      transform:translateY(-1px);
+    }
+
+    /* ── Grid layout ── */
+    .grid{display:grid; grid-template-columns: 1.15fr .95fr; gap:22px; margin-top:28px}
+
+    /* ── Shared card style ── */
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--glow), var(--glow2);
+      backdrop-filter: blur(16px);
+      position:relative;
+      overflow:hidden;
+      transition: border-color .3s ease, box-shadow .3s ease;
+    }
+    .card:hover{
+      border-color:rgba(94,230,255,.2);
+    }
+    /* Animated top accent */
+    .card::before{
+      content:"";
+      position:absolute; top:0; left:0; right:0; height:1px;
+      background:linear-gradient(90deg, transparent, rgba(94,230,255,.5), transparent);
+    }
+
+    /* ── TOC ── */
+    .toc{padding:26px}
+    .toc h2,.mindmap h2{
+      font-size:.82rem; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--muted); font-weight:600; margin-bottom:18px;
+    }
+    .toc a{
+      display:flex; align-items:center; gap:10px;
+      padding:12px 14px; margin:6px 0; border-radius:14px;
+      color:var(--text); text-decoration:none; font-size:.95rem;
+      background:rgba(255,255,255,.02);
+      border:1px solid transparent;
+      transition: all .25s cubic-bezier(.22,1,.36,1);
+      position:relative;
+    }
+    .toc a::before{
+      content:""; display:block; width:4px; height:4px;
+      border-radius:50%; background:var(--accent2); flex-shrink:0;
+      transition: all .25s ease;
+    }
+    .toc a:hover{
+      transform:translateX(6px);
+      border-color:rgba(94,230,255,.25);
+      background:rgba(94,230,255,.06);
+      box-shadow:0 0 30px rgba(94,230,255,.06);
+    }
+    .toc a:hover::before{
+      background:var(--accent);
+      box-shadow:0 0 8px var(--accent);
+      width:6px; height:6px;
+    }
+
+    /* ── Mind map ── */
+    .mindmap{padding:26px}
+    .map-center{
+      text-align:center; font-weight:800; padding:16px 18px; border-radius:18px;
+      background:linear-gradient(135deg, rgba(94,230,255,.14), rgba(139,124,255,.14));
+      border:1px solid rgba(94,230,255,.22);
+      margin-bottom:18px;
+      box-shadow:0 0 40px rgba(94,230,255,.06);
+      font-size:1rem;
+      letter-spacing:-.01em;
+      position:relative;
+    }
+    .map-center::after{
+      content:""; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%);
+      width:1px; height:10px;
+      background:linear-gradient(to bottom, rgba(94,230,255,.4), transparent);
+    }
+    .map-list{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    .node{
+      padding:14px 15px; border-radius:16px;
+      background:rgba(255,255,255,.025);
+      border:1px solid rgba(255,255,255,.05);
+      font-size:.9rem; color:var(--muted);
+      position:relative;
+      transition: all .3s ease;
+    }
+    .node strong{ color:var(--accent); font-family:'JetBrains Mono', monospace; font-size:.85rem }
+    .node:hover{
+      border-color:rgba(94,230,255,.2);
+      background:rgba(94,230,255,.04);
+      transform:translateY(-2px);
+      box-shadow:0 8px 30px rgba(0,0,0,.2);
+    }
+
+    /* ── Main content ── */
+    main{margin-top:28px; display:grid; gap:20px}
+
+    /* ── Sections ── */
+    .section{
+      padding:36px 34px; position:relative;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--glow), var(--glow2);
+      backdrop-filter: blur(16px);
+      overflow:hidden;
+      transition: border-color .3s ease, box-shadow .3s ease;
+    }
+    .section:hover{
+      border-color:rgba(94,230,255,.18);
+    }
+    /* Animated top line */
+    .section::before{
+      content:"";
+      position:absolute; top:0; left:0; right:0; height:1px;
+      background:linear-gradient(90deg, transparent, rgba(94,230,255,.5), transparent);
+    }
+    /* Section number watermark */
+    .section-number{
+      position:absolute; top:-16px; right:20px;
+      font-size:8rem; font-weight:900; line-height:1;
+      background:linear-gradient(180deg, rgba(94,230,255,.06), transparent);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      pointer-events:none;
+      font-family:'JetBrains Mono', monospace;
+      letter-spacing:-.06em;
+    }
+
+    .section h2{
+      font-size:1.6rem; margin:0 0 6px; letter-spacing:-.02em;
+      font-weight:800;
+    }
+    .section h3{
+      font-size:.78rem; margin:0 0 18px;
+      color:var(--accent); letter-spacing:.1em; text-transform:uppercase;
+      font-weight:600;
+    }
+    p{ margin:0 0 16px; color:rgba(238,244,255,.85) }
+
+    /* ── Summary box ── */
+    .summary{
+      padding:18px 20px; margin-top:18px;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(94,230,255,.08), rgba(139,124,255,.04));
+      border:1px solid rgba(94,230,255,.12);
+      position:relative;
+      overflow:hidden;
+    }
+    .summary::before{
+      content:"";
+      position:absolute; left:0; top:0; bottom:0; width:3px;
+      background:linear-gradient(180deg, var(--accent), var(--accent2));
+      border-radius:3px;
+    }
+    .summary p{ margin:0; color:var(--text); font-weight:500 }
+
+    /* ── Quote ── */
+    .quote{
+      margin:20px 0; padding:20px 22px; border-radius:18px;
+      background:linear-gradient(135deg, rgba(139,124,255,.08), rgba(255,107,157,.04));
+      border:1px solid rgba(139,124,255,.15);
+      color:#e0d4ff;
+      font-style:italic;
+      font-size:1.05rem;
+      position:relative;
+    }
+    .quote::before{
+      content:"\201C"; position:absolute; top:8px; left:14px;
+      font-size:3rem; color:rgba(139,124,255,.2); font-style:normal;
+      line-height:1; font-family:Georgia,serif;
+    }
+
+    /* ── List items in sections ── */
+    .list-item{
+      padding:10px 14px; margin:8px 0; border-radius:12px;
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.04);
+      font-size:.95rem;
+      transition: border-color .2s ease;
+    }
+    .list-item:hover{ border-color:rgba(94,230,255,.15) }
+    .list-item strong{ color:var(--accent3) }
+
+    /* ── Footer ── */
+    .footer{
+      margin-top:32px; padding:28px; color:var(--muted); font-size:.9rem;
+      text-align:center;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      backdrop-filter: blur(16px);
+      position:relative;
+      overflow:hidden;
+    }
+    .footer::before{
+      content:"";
+      position:absolute; bottom:0; left:0; right:0; height:1px;
+      background:linear-gradient(90deg, transparent, rgba(94,230,255,.3), transparent);
+    }
+
+    .small{font-size:.9rem; color:var(--muted)}
+    strong{color:#f0f6ff}
+
+    /* ── Responsive ── */
+    @media (max-width: 860px){
+      .grid{grid-template-columns:1fr}
+      .map-list{grid-template-columns:1fr}
+      .hero{padding:40px 24px 36px}
+      .section{padding:26px 22px}
+      .section-number{font-size:5rem; top:-10px; right:10px}
+    }
+    @media (max-width: 480px){
+      h1{ font-size:2rem }
+      .container{ padding:16px 12px 48px }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+  <div class="particles" id="particles"></div>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="container">
+    <header class="hero reveal">
+      <div class="hero-orb-left"></div>
+      <div class="hero-badge">Economia Pós-Trabalho</div>
+      <h1>Os 7 Frameworks para Entender a Economia Pós-Trabalho</h1>
+      <p class="subtitle">
+        Uma leitura em português, reestruturada para web, com visual futurista e organização em sete intuições centrais
+        para facilitar estudo, compartilhamento e discussão.
+      </p>
+      <div class="meta">
+        <span class="tag">Versão em português</span>
+        <span class="tag">Layout futurista</span>
+        <span class="tag">Mapa mental em CSS</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <nav class="card toc reveal">
+        <h2>Índice</h2>
+        <a href="#intro">Introdução</a>
+        <a href="#i1">1. Melhor, Mais Rápido, Mais Barato, Mais Seguro</a>
+        <a href="#i2">2. Força, Destreza, Cognição, Empatia</a>
+        <a href="#i3">3. Salários, Transferências e Capital</a>
+        <a href="#i4">4. Dependência Bilateral Dupla</a>
+        <a href="#i5">5. Ampliar a Participação no Capital</a>
+        <a href="#i6">6. Substituir o Poder de Barganha do Trabalho</a>
+        <a href="#i7">7. A Economia do Significado</a>
+        <a href="#conclusao">Conclusão</a>
+      </nav>
+
+      <aside class="card mindmap reveal">
+        <h2>Mapa mental</h2>
+        <div class="map-center">Economia Pós-Trabalho</div>
+        <div class="map-list">
+          <div class="node"><strong>1.</strong> Automação vence quando for melhor, mais rápida, mais barata e mais segura.</div>
+          <div class="node"><strong>2.</strong> O trabalho humano se resume a quatro capacidades econômicas.</div>
+          <div class="node"><strong>3.</strong> A renda das famílias vem de salários, transferências e capital.</div>
+          <div class="node"><strong>4.</strong> A automação ameaça o pacto histórico entre Estado e cidadãos.</div>
+          <div class="node"><strong>5.</strong> Sem salários, a propriedade de capital precisa se expandir.</div>
+          <div class="node"><strong>6.</strong> Novos direitos algorítmicos podem restaurar alavancagem cívica.</div>
+          <div class="node"><strong>7.</strong> O que sobra para humanos é a economia do significado.</div>
+          <div class="node"><strong>&#x2192;</strong> Sem renda doméstica, a demanda agregada colapsa.</div>
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <section class="section reveal" id="intro">
+        <h2>Introdução</h2>
+        <p>
+          O livro <em>Labor/Zero: A Post-Labor Economics Treatise</em> acabou de ser lançado no Kickstarter.
+          Enquanto isso, o texto propõe condensar suas ideias em sete frameworks intuitivos, para que qualquer pessoa
+          consiga compreender a Economia Pós-Trabalho em sua forma mais simples.
+        </p>
+      </section>
+
+      <section class="section reveal" id="i1">
+        <span class="section-number">01</span>
+        <h2>Intuição 1: Melhor, Mais Rápido, Mais Barato, Mais Seguro</h2>
+        <h3>Quando a substituição do trabalho se torna inevitável</h3>
+        <p>
+          Substituição do trabalho ocorre quando uma máquina substitui um ser humano em uma atividade economicamente valiosa.
+          Colheitadeiras modernas substituem centenas de trabalhadores rurais ao cortar, trilhar e separar a produção em uma única máquina.
+          RPA (<em>Robotic Process Automation</em>) vem eliminando empregos de back office há décadas, e a IA baseada em LLM está acelerando essa tendência.
+        </p>
+        <p>
+          Em uma visão histórica ampla, existe um teste simples que uma nova tecnologia precisa passar para que a substituição do trabalho se torne inevitável:
+          ela precisa ser <strong>melhor, mais rápida, mais barata e mais segura</strong>. Quando uma máquina supera os humanos nesses quatro critérios,
+          contratar pessoas passa a ser economicamente irracional.
+        </p>
+        <div class="summary">
+          <p>A substituição do trabalho acontece quando a tecnologia supera os humanos nessas quatro dimensões.
+          Depois disso, contratar pessoas deixa de fazer sentido econômico.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i2">
+        <span class="section-number">02</span>
+        <h2>Intuição 2: Força, Destreza, Cognição, Empatia</h2>
+        <h3>Os quatro "grupos alimentares" do valor econômico humano</h3>
+        <p>
+          Muitas pessoas acreditam que "sempre haverá mais trabalho a ser feito" — e isso é verdade. A quantidade de trabalho necessária para nossa espécie é,
+          na prática, infinita. Sempre haverá mais ciência, mais engenharia e mais direito do que conseguimos executar. Quando nos tornarmos uma civilização espacial,
+          colônias não irão se construir sozinhas.
+        </p>
+        <p>
+          Mas não existe nenhuma lei da física dizendo que humanos precisam executar essas atividades. Se olharmos para o lado da oferta de trabalho,
+          veremos que os seres humanos oferecem à economia, fundamentalmente, quatro coisas: <strong>força, destreza, cognição e empatia</strong>.
+          Toda tarefa economicamente valiosa é uma combinação dessas capacidades. Marketing e vendas combinam cognição e empatia.
+          Neurocirurgia combina destreza e cognição.
+        </p>
+        <p>
+          O problema é que as máquinas estão começando a fornecer também esses quatro "grupos alimentares" do trabalho.
+          Isso significa que o lado da oferta do mercado de trabalho está prestes a ficar extremamente saturado.
+          Isso não quer dizer que 100% dos empregos desaparecerão para sempre, mas a intuição central aqui é que só temos quatro atributos econômicos básicos
+          para converter em salário: força, destreza, cognição e empatia.
+        </p>
+        <div class="summary">
+          <p>Humanos fornecem quatro capacidades econômicas básicas ao mercado de trabalho: força, destreza, cognição e empatia.
+          Todas as tarefas economicamente valiosas derivam dessas quatro habilidades.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i3">
+        <span class="section-number">03</span>
+        <h2>Intuição 3: Salários, Transferências e Capital</h2>
+        <h3>De onde vem a renda das famílias</h3>
+        <p>
+          A fórmula é simples: se IA e robôs tomarem todos os empregos, os salários secam, a demanda agregada do consumidor cai,
+          as empresas precisam demitir ainda mais funcionários e entramos em um ciclo vicioso. Não se vendem bens e serviços para uma população falida.
+          Esse é o cenário da "espiral deflacionária da morte".
+        </p>
+        <p>
+          Por isso, o cerne da Economia Pós-Trabalho é a pergunta:
+          <strong>como sustentar a renda das famílias?</strong> O consumo das famílias responde por mais de 70% do PIB.
+          Sem esse consumo, a economia trava.
+        </p>
+        <p>
+          Órgãos governamentais, como o BEA (<em>Bureau of Economic Analysis</em>), há décadas dividem a renda familiar em três grupos:
+        </p>
+        <div class="list-item"><strong>Salários</strong> — renda proveniente da venda do seu tempo, inclusive trabalho autônomo.</div>
+        <div class="list-item"><strong>Capital</strong> — renda proveniente da posse de ativos produtivos, como ações, títulos e imóveis.</div>
+        <div class="list-item"><strong>Transferências</strong> — assistência governamental, como bem-estar social, aposentadoria, educação e saúde; incluiria também a UBI.</div>
+        <p>
+          Se os salários estão desaparecendo, então capital e transferências precisam compensar essa perda.
+          O problema é que a maioria das pessoas foca apenas nas transferências, criando ideias cada vez mais elaboradas sobre UBI e UHI,
+          enquanto ignora o papel do capital.
+        </p>
+        <div class="summary">
+          <p>A renda familiar — base da demanda agregada em uma economia de consumo — deriva de apenas três fontes:
+          salários, transferências e capital.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i4">
+        <span class="section-number">04</span>
+        <h2>Intuição 4: Dependência Bilateral Dupla</h2>
+        <h3>O problema político mais sombrio</h3>
+        <p>
+          Antes de resolver o problema monetário, o texto introduz um problema mais sombrio: a <strong>dependência bilateral dupla</strong>.
+          Isso significa que o Estado sempre dependeu do povo para certas coisas, e o povo sempre dependeu do Estado.
+          Dessa troca nasce o poder de negociação.
+        </p>
+        <p>
+          O Estado exige produção (trabalho, impostos) e serviço (soldados, exército) da população para funcionar.
+          O povo exige segurança (proteção física) e facilitação (mercados, comércio, infraestrutura institucional) do Estado.
+          Esse é o princípio zero de todos os contratos sociais ao longo da história, desde monarquias antigas até democracias modernas.
+        </p>
+        <p>
+          IA e robótica ameaçam quebrar essa dependência bilateral.
+          Quando robôs e drones podem conduzir a guerra, e a mesma automação pode conduzir o trabalho, o Estado deixa de precisar das pessoas.
+          E quando os humanos se tornam opcionais para o Estado, ouvi-los também se torna opcional.
+        </p>
+        <div class="quote">
+          Se isso causa um arrepio, é porque você está prestando atenção.
+        </div>
+        <div class="summary">
+          <p>Estado e cidadãos sempre mantiveram uma relação de dependência mútua.
+          A automação ameaça romper esse pacto histórico.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i5">
+        <span class="section-number">05</span>
+        <h2>Intuição 5: Ampliar a Participação no Capital</h2>
+        <h3>Como sustentar a renda das famílias sem torná-las reféns do governo</h3>
+        <p>
+          Programas como UBI (<em>Universal Basic Income</em>), NIT (<em>Negative Income Tax</em>) e renda garantida são necessários,
+          mas insuficientes. O motivo é que todos dependem de esquemas de taxar e gastar, e isso torna a população inteiramente dependente do governo.
+          Se os benefícios forem cortados, a pessoa fica sem saída. Isso permite que políticos mantenham a subsistência da população como refém.
+        </p>
+        <p>
+          A proposta, então, é ampliar a propriedade da economia. Soluções baseadas em mercado e propriedade precisam gerar mais renda vinda de capital.
+          Se salários estão indo embora, por simples eliminação lógica, precisamos de mais capital.
+        </p>
+        <p>
+          O ponto de partida ainda pode ser o Estado, mas não o ponto de chegada:
+        </p>
+        <div class="list-item"><strong>Fundos soberanos</strong> — como o fundo de pensão da Noruega.</div>
+        <div class="list-item"><strong>Fundos estaduais</strong> — como o Alaska Permanent Fund e o New Mexico Land Grant Permanent Fund.</div>
+        <div class="list-item"><strong>Fundos urbanos locais</strong> — para distribuição hiperlocal de renda.</div>
+        <p>
+          Esses fundos pagariam dividendos ou prestariam serviços. Assim, cada cidadão poderia receber pagamentos periódicos vindos de diferentes níveis de governo.
+          Mas isso é apenas o lado público.
+        </p>
+        <p>
+          No lado privado, a ideia é expandir:
+        </p>
+        <div class="list-item"><strong>ESOPs, EOTs, cooperativas e trusts</strong> — participação societária nas empresas em que você já trabalha e consome.</div>
+        <div class="list-item"><strong>DAOs</strong> (<em>Decentralized Autonomous Organizations</em>) — novas opções de propriedade privada.</div>
+        <div class="list-item"><strong>Baby Bonds e Capital Básico Universal</strong> — dotações patrimoniais por direito de nascimento.</div>
+        <p>
+          Combinando programas de transferência com programas de capital, cada família terminaria com um portfólio de renda:
+          parte gerida pelo Estado, parte gerida de forma privada. As transferências formariam o piso universal;
+          o capital cresceria com a economia.
+        </p>
+        <div class="summary">
+          <p>Como os salários estão desaparecendo, restam transferências e capital.
+          E, para evitar dependência total do governo, o capital precisa carregar a maior parte desse peso.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i6">
+        <span class="section-number">06</span>
+        <h2>Intuição 6: Substituir o Poder de Barganha do Trabalho</h2>
+        <h3>Novas alavancas para manter equilíbrio cívico</h3>
+        <p>
+          Agora entra o problema do poder de barganha. Quando a dependência bilateral se rompe, corremos o risco de nos tornar apenas um fardo para o Estado,
+          a menos que ainda exista algum meio de contribuir ou de forçar quem está no poder à mesa de negociação.
+        </p>
+        <p>
+          O texto reconhece que não é do interesse de ninguém que a economia pare de funcionar. O simples interesse racional fará com que bilionários e políticos
+          tentem sustentar a renda das famílias. Mas confiar apenas na boa vontade deles não é uma base sólida.
+        </p>
+        <p>
+          Ao longo de toda a história, a única força capaz de levar partes adversárias à negociação foi uma <strong>ameaça crível</strong>.
+          Em alguns casos históricos, isso assumiu forma literal de força. Em outros, os sindicatos descobriram que não era preciso violência:
+          bastava parar de trabalhar e bloquear a produção.
+        </p>
+        <p>
+          O problema é que, com IA e robótica, não podemos sindicalizar máquinas. Elas são propriedade; são ferramentas; fazem o que seus donos determinam.
+          Por isso, seria necessário um novo conjunto de alavancas.
+        </p>
+        <p>
+          O texto resume isso no conceito de <strong>direitos algorítmicos</strong>: a capacidade de interromper fluxos financeiros,
+          impor transparência radical e controlar dados. A ideia é construir uma infraestrutura ao redor da tecnologia que eliminará a necessidade de trabalho humano,
+          de forma que a propriedade continue nas mãos de cidadãos comuns — e também o "botão de desligamento" econômico capaz de forçar elites à negociação.
+        </p>
+        <div class="summary">
+          <p>Manter o equilíbrio cívico depende de manter ameaças críveis.
+          No mundo pós-trabalho, isso exigiria novos direitos e novas infraestruturas algorítmicas.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="i7">
+        <span class="section-number">07</span>
+        <h2>Intuição 7: A Economia do Significado</h2>
+        <h3>O que sobra quando empregar humanos deixa de fazer sentido econômico</h3>
+        <p>
+          Por fim, o texto trata do lado da demanda do mercado de trabalho. Se a oferta de trabalho será saturada por máquinas,
+          então, para cada tarefa valiosa, uma máquina poderá fazê-la melhor, mais rápido, mais barato e mais seguro do que um humano.
+          Contratar humanos passará a ser irracional do ponto de vista econômico.
+        </p>
+        <p>
+          No entanto, os humanos nem sempre são racionais.
+        </p>
+        <p>
+          O exemplo dado é simples: alguém pode ouvir Taylor Swift no Spotify por um custo mensal baixíssimo e com qualidade de som até melhor em casa.
+          Mesmo assim, muitas pessoas pagam centenas de dólares em ingressos, hotel e passagem para vê-la ao vivo.
+          Por quê? Porque seres humanos são profundamente irracionais quando o assunto é significado.
+          Nosso corpo evoluiu para se sintonizar com outros humanos e com experiências reais, corporificadas.
+        </p>
+        <p>
+          O texto então propõe um framework setorial:
+        </p>
+        <div class="list-item"><strong>Primário</strong> — economia da extração: mineração, agricultura, pesca, madeira etc.</div>
+        <div class="list-item"><strong>Secundário</strong> — economia da manufatura: transformar matérias-primas em aço, concreto, peças, motores etc.</div>
+        <div class="list-item"><strong>Terciário</strong> — economia de serviços: advogados, médicos, engenheiros e, hoje, quase todo o trabalho do conhecimento.</div>
+        <p>
+          Em países avançados, o setor primário já representa menos de 2% da economia. O setor secundário segue em declínio.
+          O setor terciário atingiu seu pico na última década e começaria agora sua queda gradual.
+        </p>
+        <p>
+          Então surge um quarto setor:
+        </p>
+        <div class="list-item"><strong>Quaternário</strong> — a <strong>economia do significado</strong>, formada por tudo aquilo pelo qual humanos pagarão um prêmio apenas para que outros humanos façam.</div>
+        <p>Exemplos:</p>
+        <div class="list-item"><strong>Economia da Atenção</strong> — criadores de conteúdo, relações parasociais, conexões em rede; filósofos também operam aqui.</div>
+        <div class="list-item"><strong>Economia da Experiência</strong> — concertos, spas, massagens, rafting, experiências presenciais e locais; sacerdotes também entram aqui.</div>
+        <div class="list-item"><strong>Economia Estatutária</strong> — cargos de alta responsabilidade moral, como policiais, juízes, presidentes e proprietários de empresas.</div>
+        <p>
+          Ainda haverá muitos trabalhos a serem feitos, mas não haverá trabalho suficiente para que todos tenham emprego.
+          A economia quaternária não consegue absorver tanta gente, porque não existe atenção humana suficiente para todos.
+          Ainda assim, ela organiza o que resta como um espaço em que pessoas pagarão mais apenas pela proveniência humana, e não pela eficiência.
+        </p>
+        <div class="summary">
+          <p>Quando contratar humanos se torna economicamente irracional, o que resta é a economia do significado:
+          o espaço em que pessoas pagam um prêmio pela presença, origem e envolvimento humanos.</p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="conclusao">
+        <h2>Conclusão</h2>
+        <p>
+          Esses sete frameworks oferecem uma visão de alto nível sobre a Economia Pós-Trabalho.
+          A tese central é clara: se o trabalho assalariado encolhe por causa da automação, a sociedade precisa reorganizar renda, propriedade,
+          poder de barganha e propósito humano.
+        </p>
+        <p>
+          A implicação prática é que essas ideias precisam circular amplamente no debate público, econômico e institucional,
+          para que possam ser avaliadas, criticadas e, quando fizer sentido, transformadas em política e desenho institucional.
+        </p>
+        <p class="small">
+          Observação: esta página é uma tradução editorial do texto enviado pelo usuário, com adaptação de formatação para leitura web.
+        </p>
+      </section>
+    </main>
+
+    <div class="footer reveal">
+      Feito para publicação em site estático gratuito &bull; HTML único &bull; fácil de subir em GitHub Pages, Cloudflare Pages ou Netlify
+    </div>
+  </div>
+
+  <script>
+    // ── Floating particles ──
+    (function(){
+      const container = document.getElementById('particles');
+      const count = 18;
+      for(let i = 0; i < count; i++){
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (12 + Math.random() * 20) + 's';
+        p.style.animationDelay = (Math.random() * 15) + 's';
+        container.appendChild(p);
+      }
+    })();
+
+    // ── Reading progress bar ──
+    (function(){
+      const bar = document.getElementById('progressBar');
+      window.addEventListener('scroll', function(){
+        const h = document.documentElement;
+        const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        bar.style.width = pct + '%';
+      }, {passive:true});
+    })();
+
+    // ── Scroll reveal (IntersectionObserver) ──
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+      els.forEach(function(el){ obs.observe(el) });
+    })();
+  </script>
+</body>
+</html>
