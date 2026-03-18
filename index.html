@@ -199,11 +199,143 @@
       border-bottom: 1px solid var(--text-dim);
     }
 
-    .results-placeholder {
-      text-align: center;
-      padding: 60px 20px;
+    /* ---- Results Panel ---- */
+    .results-panel {
+      display: grid;
+      gap: 18px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .results-card {
+      background: rgba(22, 33, 62, 0.72);
+      border: 1px solid var(--text-dim);
+      border-radius: var(--border-radius);
+      padding: 20px;
+    }
+
+    .results-reveal {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .results-panel.results-visible .results-reveal {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .results-panel.results-visible .countdown-card { transition-delay: 0ms; }
+    .results-panel.results-visible .gauge-card { transition-delay: 80ms; }
+    .results-panel.results-visible .roast-card { transition-delay: 160ms; }
+
+    .results-card-heading {
+      font-size: 0.75rem;
       color: var(--text-secondary);
-      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 16px 0;
+      border-bottom: 1px solid var(--text-dim);
+      padding-bottom: 8px;
+    }
+
+    .result-job-name {
+      font-size: 1rem;
+      color: var(--neon-cyan);
+      text-align: center;
+      letter-spacing: 1px;
+      margin: 0 0 4px 0;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .countdown-unit {
+      text-align: center;
+    }
+
+    .countdown-value {
+      font-size: 3rem;
+      color: var(--neon-green);
+      line-height: 1;
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      display: block;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .gauge-svg {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .gauge-arc-bg {
+      fill: none;
+      stroke: var(--text-dim);
+      stroke-width: 6;
+    }
+
+    .gauge-needle-line {
+      stroke: var(--neon-pink);
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+
+    .gauge-cap {
+      fill: var(--text-secondary);
+    }
+
+    .gauge-label-edge {
+      font-size: 11px;
+      fill: var(--text-secondary);
+    }
+
+    #gauge-needle {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      transform: rotate(-90deg);
+      transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gauge-summary {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+
+    #risk-label {
+      color: var(--neon-cyan);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    #risk-score {
+      color: var(--text-secondary);
+    }
+
+    #roast-message {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .countdown-grid { grid-template-columns: 1fr; }
+      .countdown-value { font-size: 2.4rem; }
     }
 
     .try-again-btn {
@@ -251,11 +383,50 @@
   <div id="results-view">
     <div class="container">
       <h1 class="page-title">Your fate is sealed</h1>
-      <div class="results-placeholder" id="results-content">
-        <p>&#x23F3; RESULTS WILL APPEAR HERE IN PHASE 2</p>
-        <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 16px;">
-          Countdown timer &bull; Risk gauge &bull; Roast message
-        </p>
+      <div class="results-panel" id="results-panel">
+
+        <p class="result-job-name" id="result-job-name">--</p>
+
+        <section class="results-card results-reveal countdown-card">
+          <p class="results-card-heading">Estimated Shelf Life</p>
+          <div class="countdown-grid">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="countdown-years">0</span>
+              <span class="countdown-label">Years</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="countdown-months">0</span>
+              <span class="countdown-label">Months</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="countdown-days">0</span>
+              <span class="countdown-label">Days</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="results-card results-reveal gauge-card">
+          <p class="results-card-heading">Automation Danger</p>
+          <svg class="gauge-svg" viewBox="0 0 240 160" aria-hidden="true">
+            <path class="gauge-arc-bg" d="M20 140 A100 100 0 0 1 220 140" />
+            <g id="gauge-needle">
+              <line class="gauge-needle-line" x1="120" y1="140" x2="120" y2="52" />
+            </g>
+            <circle class="gauge-cap" cx="120" cy="140" r="8" />
+            <text class="gauge-label-edge" x="14" y="158">SAFE</text>
+            <text class="gauge-label-edge" x="195" y="158">DOOMED</text>
+          </svg>
+          <div class="gauge-summary">
+            <span id="risk-label">--</span>
+            <span id="risk-score">0.0 / 10</span>
+          </div>
+        </section>
+
+        <section class="results-card results-reveal roast-card">
+          <p class="results-card-heading">Final Verdict</p>
+          <p id="roast-message">--</p>
+        </section>
+
       </div>
       <div style="text-align: center; margin-top: 30px;">
         <button class="try-again-btn" id="try-again-btn">&#x21BB; TRY AGAIN</button>
