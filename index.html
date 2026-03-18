@@ -419,6 +419,40 @@
       margin-top: 32px;
     }
 
+    .share-actions {
+      margin-top: 28px;
+      padding: 18px;
+      border: 1px solid var(--neon-cyan);
+      border-radius: var(--border-radius);
+      box-shadow: var(--glow-cyan);
+      background: rgba(0, 212, 255, 0.05);
+    }
+
+    .share-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .share-btn {
+      background: transparent;
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      padding: 10px 16px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .share-btn:hover {
+      box-shadow: var(--glow-cyan);
+      background: rgba(0, 212, 255, 0.12);
+    }
+
     .try-again-btn {
       background: transparent;
       border: 1px solid var(--neon-cyan);
@@ -441,6 +475,7 @@
     .card:focus-visible,
     .exp-btn:focus-visible,
     .lang-btn:focus-visible,
+    .share-btn:focus-visible,
     .cta-btn:focus-visible,
     .try-again-btn:focus-visible {
       outline: 2px solid var(--neon-cyan);
@@ -587,6 +622,14 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
       }
+
+      .share-actions-row {
+        flex-direction: column;
+      }
+
+      .share-btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -670,6 +713,14 @@
         </section>
 
       </div>
+      <section class="share-actions" id="share-actions">
+        <p class="results-card-heading" id="share-heading">Share This Doom</p>
+        <div class="share-actions-row">
+          <button type="button" class="share-btn" id="share-x-btn">X / Twitter</button>
+          <button type="button" class="share-btn" id="share-whatsapp-btn">WhatsApp</button>
+          <button type="button" class="share-btn" id="share-linkedin-btn">LinkedIn</button>
+        </div>
+      </section>
       <div class="try-again-container">
         <button class="try-again-btn" id="try-again-btn">&#x21BB; TRY AGAIN</button>
       </div>
@@ -1148,6 +1199,10 @@
       document.getElementById('gauge-safe-label').textContent = t('safeLabel', currentLanguage);
       document.getElementById('gauge-doomed-label').textContent = t('doomedLabel', currentLanguage);
       document.getElementById('roast-heading').textContent = t('finalVerdictHeading', currentLanguage);
+      document.getElementById('share-heading').textContent = t('shareHeading', currentLanguage);
+      document.getElementById('share-x-btn').textContent = t('shareXLabel', currentLanguage);
+      document.getElementById('share-whatsapp-btn').textContent = t('shareWhatsAppLabel', currentLanguage);
+      document.getElementById('share-linkedin-btn').textContent = t('shareLinkedInLabel', currentLanguage);
       document.getElementById('try-again-btn').textContent = t('tryAgainLabel', currentLanguage);
       document.getElementById('language-toggle-label').textContent = t('languageLabel', currentLanguage);
       document.querySelector('.lang-btn[data-lang="en"]').setAttribute('aria-label', t('languageEnglish', currentLanguage));
@@ -1336,7 +1391,105 @@
 
     // ===== SHARE =====
 
-    // Share functionality — Phase 4
+    function serializeShareState(state) {
+      var params = new URLSearchParams();
+      if (state && state.job) {
+        params.set('job', state.job);
+      }
+      if (state && state.exp) {
+        params.set('exp', state.exp);
+      }
+      if (state && state.lang) {
+        params.set('lang', state.lang);
+      }
+      return params.toString();
+    }
+
+    function parseShareState(hash) {
+      var rawHash = hash || '';
+      var normalizedHash = rawHash.charAt(0) === '#' ? rawHash.slice(1) : rawHash;
+      var params = new URLSearchParams(normalizedHash);
+      return {
+        job: params.get('job') || '',
+        exp: params.get('exp') || '',
+        lang: params.get('lang') || ''
+      };
+    }
+
+    function buildShareState(result) {
+      if (!result || !result.occupation || !result.seniority) {
+        return null;
+      }
+      return {
+        job: result.occupation.id,
+        exp: result.seniority.experienceId,
+        lang: currentLanguage
+      };
+    }
+
+    function buildBasePageUrl() {
+      return window.location.origin + window.location.pathname;
+    }
+
+    function buildStateUrl(state) {
+      return buildBasePageUrl() + '#' + serializeShareState(state);
+    }
+
+    function buildShareMessage(result, language) {
+      if (!result) return '';
+      var resultUrl = buildStateUrl(buildShareState(result));
+      var occupationLabel = getOccupationLabel(result.occupation.id, language);
+      var seniorityLabel = getSeniorityLabel(result.seniority.id, language);
+      var countdown = result.countdown;
+
+      if (language === 'ptbr') {
+        return occupationLabel +
+          ' // ' +
+          seniorityLabel +
+          ': ' +
+          countdown.years +
+          ' anos, ' +
+          countdown.months +
+          ' meses e ' +
+          countdown.days +
+          ' dias ate a IA te atropelar.\n\nVeja seu destino: ' +
+          resultUrl;
+      }
+
+      return occupationLabel +
+        ' // ' +
+        seniorityLabel +
+        ': ' +
+        countdown.years +
+        ' years, ' +
+        countdown.months +
+        ' months, and ' +
+        countdown.days +
+        ' days until AI clocks you out.\n\nSee your doom: ' +
+        resultUrl;
+    }
+
+    function buildXShareUrl(result, language) {
+      var params = new URLSearchParams();
+      params.set('text', buildShareMessage(result, language));
+      params.set('url', buildStateUrl(buildShareState(result)));
+      return 'https://twitter.com/intent/tweet?' + params.toString();
+    }
+
+    function buildWhatsAppShareUrl(result, language) {
+      var params = new URLSearchParams();
+      params.set('text', buildShareMessage(result, language));
+      return 'https://api.whatsapp.com/send?' + params.toString();
+    }
+
+    function buildLinkedInShareUrl(result) {
+      return 'https://www.linkedin.com/sharing/share-offsite/?url=' +
+        encodeURIComponent(buildStateUrl(buildShareState(result)));
+    }
+
+    function openShareWindow(url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
 
     // ===== BOOT =====
 
@@ -1373,6 +1526,18 @@
         if (result) {
           showResults(result);
         }
+      });
+      document.getElementById('share-x-btn').addEventListener('click', function() {
+        if (!lastResult) return;
+        openShareWindow(buildXShareUrl(lastResult, currentLanguage));
+      });
+      document.getElementById('share-whatsapp-btn').addEventListener('click', function() {
+        if (!lastResult) return;
+        openShareWindow(buildWhatsAppShareUrl(lastResult, currentLanguage));
+      });
+      document.getElementById('share-linkedin-btn').addEventListener('click', function() {
+        if (!lastResult) return;
+        openShareWindow(buildLinkedInShareUrl(lastResult));
       });
       document.getElementById('try-again-btn').addEventListener('click', function() {
         resetResultState();
