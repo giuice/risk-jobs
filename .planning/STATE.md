@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 04-content-i18n-and-sharing-01-PLAN.md
-last_updated: "2026-03-18T10:21:41.037Z"
-last_activity: 2026-03-18 — Completed plan 04-01 (bilingual catalogs, localized roast helpers, OG metadata, verifier, and roast matrix artifact)
+stopped_at: Completed 04-content-i18n-and-sharing-02-PLAN.md
+last_updated: "2026-03-18T10:29:17.188Z"
+last_activity: 2026-03-18 — Completed plan 04-02 (live language toggle, localized rerendering, persistence wiring, and verifier coverage)
 progress:
   total_phases: 4
   completed_phases: 3
   total_plans: 10
-  completed_plans: 8
-  percent: 80
+  completed_plans: 9
+  percent: 90
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Position
 
 Phase: 4 of 4 (Content, i18n, and Sharing) — IN PROGRESS
-Plan: 1 of 3 in current phase — COMPLETE
-Status: Phase 4 started — content/i18n/share foundation shipped; language toggle and share wiring remain
-Last activity: 2026-03-18 — Completed plan 04-01 (bilingual catalogs, localized roast helpers, OG metadata, verifier, and roast matrix artifact)
+Plan: 2 of 3 in current phase — COMPLETE
+Status: Phase 4 in progress — live language toggle and persisted bilingual rerendering shipped; share/hash hydration remains
+Last activity: 2026-03-18 — Completed plan 04-02 (live language toggle, localized rerendering, persistence wiring, and verifier coverage)
 
-Progress: [████████░░] 80% (8 of 10 plans complete; Phase 4 plan 2 next)
+Progress: [█████████░] 90% (9 of 10 plans complete; Phase 4 plan 3 next)
 
 ## Performance Metrics
 
@@ -59,6 +59,7 @@ Progress: [████████░░] 80% (8 of 10 plans complete; Phase 4 
 | Phase 03-visual-polish P01 | 1 | 2 tasks | 1 files |
 | Phase 03-visual-polish P02 | ~30 | 2 tasks | 1 files |
 | Phase 04-content-i18n-and-sharing P01 | 15 | 2 tasks | 4 files |
+| Phase 04-content-i18n-and-sharing P02 | 4 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -95,6 +96,8 @@ Recent decisions affecting current work:
 - [Phase 04-content-i18n-and-sharing]: The Phase 2 engine contract stays locale-agnostic; localization is resolved from stable ids in I18N helpers instead of mutating buildResultModel().
 - [Phase 04-content-i18n-and-sharing]: Phase 4 verification reads the shipped HTML's DATA, ENGINE, and I18N sections directly via regex and vm so the verifier proves the actual deployed artifact.
 - [Phase 04-content-i18n-and-sharing]: Social previews use committed static OG/Twitter metadata and a local 1200x630 image because GitHub Pages cannot serve hash-specific crawler metadata.
+- [Phase 04-content-i18n-and-sharing]: Language switching rerenders only the existing UI lists and targeted label nodes; the Phase 2 engine contract remains locale-agnostic.
+- [Phase 04-content-i18n-and-sharing]: Initial locale resolution order is shared-link hash override first, then localStorage, then DEFAULT_LANGUAGE.
 
 ### Pending Todos
 
@@ -107,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T10:21:41.035Z
-Stopped at: Completed 04-content-i18n-and-sharing-01-PLAN.md
+Last session: 2026-03-18T10:29:17.187Z
+Stopped at: Completed 04-content-i18n-and-sharing-02-PLAN.md
 Resume file: None

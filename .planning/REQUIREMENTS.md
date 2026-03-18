@@ -37,10 +37,10 @@
 
 ### Bilingual
 
-- [ ] **I18N-01**: User can toggle between English and Portuguese (PT-BR)
+- [x] **I18N-01**: User can toggle between English and Portuguese (PT-BR)
 - [x] **I18N-02**: All UI text exists in both languages
 - [x] **I18N-03**: All roast messages exist in both languages
-- [ ] **I18N-04**: Language preference persists across page reload (localStorage)
+- [x] **I18N-04**: Language preference persists across page reload (localStorage)
 
 ### Sharing
 
@@ -103,10 +103,10 @@
 | VIS-03 | Phase 3 | Complete |
 | VIS-04 | Phase 3 | Complete |
 | VIS-05 | Phase 3 | Complete |
-| I18N-01 | Phase 4 | Pending |
+| I18N-01 | Phase 4 | Complete |
 | I18N-02 | Phase 4 | Complete |
 | I18N-03 | Phase 4 | Complete |
-| I18N-04 | Phase 4 | Pending |
+| I18N-04 | Phase 4 | Complete |
 | SHR-01 | Phase 4 | Pending |
 | SHR-02 | Phase 4 | Pending |
 | SHR-03 | Phase 4 | Pending |
