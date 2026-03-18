@@ -606,7 +606,8 @@
     // ===== UI =====
 
     let selectedOccupation = null;
-    let selectedSeniority = null;
+    let selectedExperience = null;
+    let lastResult = null;
 
     function renderCards() {
       const grid = document.getElementById('card-grid');
@@ -650,28 +651,63 @@
       updateCTA();
     }
 
-    function selectExperience(id) {
-      selectedSeniority = id;
+    function selectExperience(experienceId) {
+      selectedExperience = experienceId;
       document.querySelectorAll('.exp-btn').forEach(function(b) {
         b.classList.remove('selected');
       });
-      var target = document.querySelector('.exp-btn[data-id="' + id + '"]');
+      var target = document.querySelector('.exp-btn[data-id="' + experienceId + '"]');
       if (target) target.classList.add('selected');
       updateCTA();
     }
 
     function updateCTA() {
       var btn = document.getElementById('cta-btn');
-      if (selectedOccupation && selectedSeniority) {
+      if (selectedOccupation && selectedExperience) {
         btn.removeAttribute('disabled');
       } else {
         btn.setAttribute('disabled', 'disabled');
       }
     }
 
-    function showResults() {
+    function showResults(result) {
+      lastResult = result;
       document.getElementById('input-view').style.display = 'none';
       document.getElementById('results-view').style.display = 'block';
+
+      document.getElementById('result-job-name').textContent = result.occupation.name + ' // ' + result.seniority.label;
+      document.getElementById('countdown-years').textContent = String(result.countdown.years);
+      document.getElementById('countdown-months').textContent = String(result.countdown.months);
+      document.getElementById('countdown-days').textContent = String(result.countdown.days);
+      document.getElementById('risk-label').textContent = result.risk.label;
+      document.getElementById('risk-label').style.color = 'var(' + result.risk.colorVar + ')';
+      document.getElementById('risk-score').textContent = result.adjustedScore.toFixed(1) + ' / 10';
+      document.getElementById('roast-message').textContent = result.roast;
+
+      var panel = document.getElementById('results-panel');
+      var needle = document.getElementById('gauge-needle');
+      panel.classList.remove('results-visible');
+      needle.style.transform = 'rotate(-90deg)';
+
+      requestAnimationFrame(function() {
+        panel.classList.add('results-visible');
+        needle.style.transform = 'rotate(' + result.risk.needleAngle + 'deg)';
+      });
+    }
+
+    function resetResultState() {
+      lastResult = null;
+      var panel = document.getElementById('results-panel');
+      panel.classList.remove('results-visible');
+      document.getElementById('result-job-name').textContent = '--';
+      document.getElementById('countdown-years').textContent = '0';
+      document.getElementById('countdown-months').textContent = '0';
+      document.getElementById('countdown-days').textContent = '0';
+      document.getElementById('risk-label').textContent = '--';
+      document.getElementById('risk-label').style.color = 'var(--neon-cyan)';
+      document.getElementById('risk-score').textContent = '0.0 / 10';
+      document.getElementById('roast-message').textContent = '--';
+      document.getElementById('gauge-needle').style.transform = 'rotate(-90deg)';
     }
 
     function showInput() {
@@ -689,11 +725,13 @@
       renderCards();
       renderExperienceSelector();
       document.getElementById('cta-btn').addEventListener('click', function() {
-        if (selectedOccupation && selectedSeniority) {
-          showResults();
+        var result = buildResultModel(selectedOccupation, selectedExperience);
+        if (result) {
+          showResults(result);
         }
       });
       document.getElementById('try-again-btn').addEventListener('click', function() {
+        resetResultState();
         showInput();
       });
     }
