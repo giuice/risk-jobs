@@ -393,6 +393,41 @@
       return null;
     }
 
+    function buildRoast(occupation, seniority, riskBand) {
+      if (!occupation || !seniority || !riskBand) return '';
+      return [ROAST_OPENERS[occupation.id], ROAST_MIDDLES[riskBand.key], ROAST_CLOSERS[seniority.id]].join(' ');
+    }
+
+    function buildResultModel(occupationId, experienceId) {
+      var occupation = getOccupationById(occupationId);
+      var seniority = getSeniorityByExperienceId(experienceId);
+      if (!occupation || !seniority) return null;
+      var adjustedScore = calculateAdjustedScore(occupation.baseScore, seniority.slevel);
+      var shelfLifeYears = calculateShelfLifeYears(adjustedScore);
+      var countdown = splitShelfLife(shelfLifeYears);
+      var risk = getRiskBand(adjustedScore);
+      var roast = buildRoast(occupation, seniority, risk);
+      return {
+        occupation: occupation,
+        seniority: seniority,
+        adjustedScore: adjustedScore,
+        shelfLifeYears: shelfLifeYears,
+        countdown: countdown,
+        risk: risk,
+        roast: roast
+      };
+    }
+
+    function buildResultMatrix() {
+      var results = [];
+      OCCUPATIONS.forEach(function(occupation) {
+        SENIORITY_LEVELS.forEach(function(seniority) {
+          results.push(buildResultModel(occupation.id, seniority.experienceId));
+        });
+      });
+      return results;
+    }
+
     // ===== I18N =====
 
     const STRINGS = { en: {}, ptbr: {} };
